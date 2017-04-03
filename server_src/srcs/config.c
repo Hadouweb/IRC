@@ -1,33 +1,46 @@
 #include "server.h"
 
-static int		get_socket(void)
+void			set_server_config(t_server *server)
 {
-	int 				s;
+	int					socket_fd;
+	struct sockaddr_in	sock_in;
 	struct protoent		*protocol;
 
 	protocol = getprotobyname("tcp");
 	if (protocol == NULL)
 		print_error_exit("getprotobyname", __FILE__, __LINE__);
-	s = socket(AF_INET, SOCK_STREAM, protocol->p_proto);
-	if (s < 0)
+	socket_fd = socket(PF_INET, SOCK_STREAM, protocol->p_proto);
+	if (socket_fd == -1)
 		print_error_exit("socket", __FILE__, __LINE__);
-	return (s);
-}
-
-void			set_server_config(t_server *server, uint16_t port)
-{
-	int 	ret_bind;
-	int 	ret_listen;
-
-	server->socket = get_socket();
-	server->config.sin_family = AF_INET;
-	server->config.sin_port = htons(port);
-	server->config.sin_addr.s_addr = INADDR_ANY;
-	ret_bind = bind(server->socket, (struct sockaddr*)&server->config,
-					sizeof(server->config));
-	if (ret_bind < 0)
+	sock_in.sin_family = AF_INET;
+	sock_in.sin_addr.s_addr = INADDR_ANY;
+	sock_in.sin_port = htons(server->port);
+	if (bind(socket_fd, (struct sockaddr*)&sock_in, sizeof(sock_in)) == -1)
 		print_error_exit("bind", __FILE__, __LINE__);
-	ret_listen = listen(server->socket, 42);
-	if (ret_listen != 0)
+	if (listen(socket_fd, 42) == -1)
 		print_error_exit("listen", __FILE__, __LINE__);
+	server->fd_array[socket_fd].type = SERVER;
+	server->fd_array[socket_fd].ft_read = server_accept;
 }
+
+void			init_server_config(t_server *server, uint16_t port)
+{
+	struct rlimit	rlp;
+	int 			i;
+
+	if (getrlimit(RLIMIT_NOFILE, &rlp) == -1)
+		print_error_exit("getrlimit", __FILE__, __LINE__);
+	server->max_fd = (int)rlp.rlim_cur;
+	server->fd_array = (t_fd*)malloc(sizeof(t_fd) * server->max_fd);
+	if (server->fd_array == NULL)
+		print_error_exit("malloc", __FILE__, __LINE__);
+	i = 0;
+	while (i < server->max_fd)
+	{
+		ft_bzero(&server->fd_array[i], sizeof(t_fd));
+		i++;
+	}
+	server->port = port;
+	set_server_config(server);
+}
+

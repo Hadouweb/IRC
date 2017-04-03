@@ -25,5 +25,14 @@ set(SRCS_SERVER
     )
 set(HEADER_SERVER server_src/includes/server.h)
 
-add_executable(client_src ${SRCS_CLIENT} ${HEADER_CLIENT})
-add_executable(server_src ${SRCS_SERVER} ${HEADER_SERVER})
+
+set(SRC_BIRCD
+    bircd/bircd.h
+    bircd/main.c)
+
+add_executable(client ${SRCS_CLIENT} ${HEADER_CLIENT})
+add_executable(server ${SRCS_SERVER} ${HEADER_SERVER})
+add_executable(BIRCD ${SRC_BIRCD})
+
+target_link_libraries(client ft)
+target_link_libraries(server ft)

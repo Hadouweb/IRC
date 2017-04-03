@@ -3,6 +3,7 @@
 
 # include <sys/types.h>
 # include <sys/socket.h>
+# include <sys/select.h>
 # include <netinet/in.h>
 # include <arpa/inet.h>
 # include <unistd.h>
@@ -10,48 +11,57 @@
 # include <stdio.h>
 # include "libft.h"
 
-typedef struct 				s_client
+enum	e_socket_type
 {
-	t_link					link;
-	pid_t 					pid;
-	int 					socket;
-	struct sockaddr_in		config;
-}							t_client;
+	FREE,
+	SERVER,
+	CLIENT,
+};
+
+# define BUF_SIZE	4096
+# define MAX(a,b)	((a > b) ? a : b)
+
+typedef struct 				s_fd
+{
+	enum e_socket_type		type;
+	void					(*ft_read)();
+	void					(*ft_write)();
+	char					buf_read[BUF_SIZE + 1];
+	char					buf_write[BUF_SIZE + 1];
+}							t_fd;
 
 typedef struct 				s_server
 {
-	int 					socket;
-	struct sockaddr_in		config;
-	t_list					client_list;
-	pid_t 					pid_event;
-	int 					status;
+	t_fd					*fd_array;
+	int 					max_fd;
+	int 					curr_nb;
+	int 					ret_select;
+	uint16_t 				port;
+	fd_set					readfds;
+	fd_set					writefds;
 }							t_server;
 
 
 /*
 ** ********************************* config.c *********************************
 */
-void						set_server_config(t_server *server, uint16_t port);
+void						set_server_config(t_server *server);
+void						init_server_config(t_server *server, uint16_t port);
 
 /*
 ** ********************************* event.c **********************************
 */
-void						event_connection(t_server *server);
-void 						event_message(t_server *server, t_client *client);
-void						event_close(t_server *server, t_client *client);
+void						server_accept(t_server *server, int s);
+
 
 /*
 ** ********************************* send.c ***********************************
 */
-void						send_to_client(t_server *server, t_client *client,
-								char *msg);
+
 /*
 ** ********************************* util.c ***********************************
 */
-void						add_client(pid_t pid, t_server *server, int socket,
-								struct sockaddr_in config);
-void						handle_client(t_server *server,
-								void(*f)(t_server *, t_client *));
+
 
 /*
 ** ********************************* error.c **********************************
