@@ -1,26 +1,68 @@
 #include "server.h"
 
+void			init_socket_fd(t_server *server)
+{
+	int		i;
+
+	i = 0;
+	server->curr_nb = 0;
+	FD_ZERO(&server->readfds);
+	FD_ZERO(&server->writefds);
+	while (i < server->max_fd)
+	{
+		if (server->fd_array[i].type != FREE)
+		{
+			FD_SET(i, &server->readfds);
+			if (strlen(server->fd_array[i].buf_write) > 0)
+				FD_SET(i, &server->writefds);
+			server->curr_nb = MAX(server->curr_nb, i);
+		}
+		i++;
+	}
+}
+
+void 			set_nickname(t_fd *fd, int sc, char *name)
+{
+	// TODO max size 9
+	ft_strcpy(fd->nickname, "\033[33;1m<");
+	ft_strcpy(&fd->nickname[ft_strlen(fd->nickname)], name);
+	ft_strcpy(&fd->nickname[ft_strlen(fd->nickname)], ft_itoa(sc));
+	ft_strcpy(&fd->nickname[ft_strlen(fd->nickname)], "> \033[0m\0");
+}
+
+void			set_client(t_server *server, int sc)
+{
+	if (server->fd_array[sc].type != SERVER)
+	{
+		set_nickname(&server->fd_array[sc], sc, "Guest");
+		printf("nickname2: %s\n", server->fd_array[sc].nickname);
+		server->fd_array[sc].type = CLIENT;
+		server->fd_array[sc].ft_read = event_server_read;
+		server->fd_array[sc].ft_write = event_server_write;
+	}
+}
+
 void			set_server_config(t_server *server)
 {
-	int					socket_fd;
+	int					socket_server;
 	struct sockaddr_in	sock_in;
 	struct protoent		*protocol;
 
 	protocol = getprotobyname("tcp");
 	if (protocol == NULL)
 		print_error_exit("getprotobyname", __FILE__, __LINE__);
-	socket_fd = socket(PF_INET, SOCK_STREAM, protocol->p_proto);
-	if (socket_fd == -1)
+	socket_server = socket(PF_INET, SOCK_STREAM, protocol->p_proto);
+	if (socket_server == -1)
 		print_error_exit("socket", __FILE__, __LINE__);
 	sock_in.sin_family = AF_INET;
 	sock_in.sin_addr.s_addr = INADDR_ANY;
 	sock_in.sin_port = htons(server->port);
-	if (bind(socket_fd, (struct sockaddr*)&sock_in, sizeof(sock_in)) == -1)
+	if (bind(socket_server, (struct sockaddr*)&sock_in, sizeof(sock_in)) == -1)
 		print_error_exit("bind", __FILE__, __LINE__);
-	if (listen(socket_fd, 42) == -1)
+	if (listen(socket_server, 42) == -1)
 		print_error_exit("listen", __FILE__, __LINE__);
-	server->fd_array[socket_fd].type = SERVER;
-	server->fd_array[socket_fd].ft_read = server_accept;
+	server->fd_array[socket_server].type = SERVER;
+	server->fd_array[socket_server].ft_read = event_server_accept;
 }
 
 void			init_server_config(t_server *server, uint16_t port)

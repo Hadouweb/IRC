@@ -16,7 +16,11 @@ SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/util.c\
         $(SRCS_PATH)/config.c\
         $(SRCS_PATH)/event.c\
+        $(SRCS_PATH)/event_server.c\
+        $(SRCS_PATH)/event_client.c\
         $(SRCS_PATH)/send.c\
+        $(SRCS_PATH)/cmd.c\
+        $(SRCS_PATH)/ring_buffer.c\
 
 OBJ = $(SRC:.c=.o)
 
