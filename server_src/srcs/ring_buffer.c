@@ -2,13 +2,9 @@
 
 void	handle_buf(t_server *server, int sc, char *msg)
 {
-	if (server && sc)
-		;
-	printf("\thandle_buf\n");
 	if (msg[0] == '/')
 	{
-		printf("\t[CMD]\n");
-		printf("\t%s\n", msg);
+		cmd(server, sc, msg);
 	}
 	else
 	{
@@ -51,8 +47,6 @@ void	ring_buffer_read(t_server *server, int sc, char *str)
 	char 	*ring_buffer;
 
 	i = 0;
-	printf("nickname: %s\n", server->fd_array[sc].nickname);
-	printf("socket: %d\n", sc);
 	ring_buffer = server->ring_buffer.buff;
 	while (str[i])
 	{

@@ -45,3 +45,15 @@ void		event_server_accept(t_server *server, int ss)
 	ft_bzero(&server->fd_array[sc], sizeof(t_fd));
 	set_client(server, sc);
 }
+
+void		event_server_print_log(t_server *server, int sc, char *str)
+{
+	if (server)
+		;
+	ft_putstr("\033[33;1m");
+	ft_putstr(server->fd_array[sc].nickname);
+	ft_putstr("\033[0m: ");
+	ft_putstr("\033[31;1m");
+	ft_putstr(str);
+	ft_putstr("\033[0m");
+}

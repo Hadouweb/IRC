@@ -19,6 +19,7 @@ enum	e_socket_type
 };
 
 # define BUF_SIZE	4096
+# define NICKNAME_SIZE 9
 # define MAX(a,b)	((a > b) ? a : b)
 
 typedef struct 			s_fd
@@ -28,7 +29,7 @@ typedef struct 			s_fd
 	void				(*ft_write)();
 	char				buf_read[BUF_SIZE + 1];
 	char				buf_write[BUF_SIZE + 1];
-	char 				nickname[50];
+	char 				nickname[NICKNAME_SIZE + 1];
 }						t_fd;
 
 typedef	struct 			s_ring_buffer
@@ -57,6 +58,7 @@ void					init_socket_fd(t_server *server);
 void					set_server_config(t_server *server);
 void					init_server_config(t_server *server, uint16_t port);
 void					set_client(t_server *server, int cs);
+void 					set_nickname(t_fd *fd, char *name);
 
 /*
 ** ********************************* event.c **********************************
@@ -67,6 +69,7 @@ void					event_check_socket(t_server *server);
 ** ********************************* event_client.c ***************************
 */
 void					event_send_all(t_server *server, int sc, char *msg);
+void					event_send_error(t_server *server, int sc, char *error);
 
 /*
 ** ********************************* event_server.c ***************************
@@ -74,6 +77,7 @@ void					event_send_all(t_server *server, int sc, char *msg);
 void					event_server_write(t_server *server, int ss);
 void					event_server_read(t_server *server, int ss);
 void					event_server_accept(t_server *server, int sc);
+void					event_server_print_log(t_server *server, int sc, char *str);
 
 /*
 ** ********************************* send.c ***********************************
@@ -82,7 +86,7 @@ void					event_server_accept(t_server *server, int sc);
 /*
 ** ********************************* util.c ***********************************
 */
-
+char 					*get_formated_msg(t_server *server, int sc, char *msg);
 
 /*
 ** ********************************* error.c **********************************
@@ -93,7 +97,7 @@ void					print_error_exit(char *str, char *file, int line);
 /*
 ** ********************************* cmd.c ************************************
 */
-int 					cmd(t_server *server, char *str);
+void 					cmd(t_server *server, int sc, char *cmd);
 
 /*
 ** ********************************* ring_buffer.c ****************************
