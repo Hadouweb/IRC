@@ -24,7 +24,7 @@ void 	convert_buffer(t_server *server, int sc)
 	ft_bzero(&buffer, sizeof(buffer));
 	i = 0;
 	j = 0;
-	ring_buffer = server->ring_buffer.buff;
+	ring_buffer = server->fd_array[sc].buf_read.buff;
 	if (ring_buffer[ft_strlen(ring_buffer) - 1] == '\n')
 		handle_buf(server, sc, ring_buffer);
 	else
@@ -47,18 +47,19 @@ void	ring_buffer_read(t_server *server, int sc, char *str)
 	char 	*ring_buffer;
 
 	i = 0;
-	ring_buffer = server->ring_buffer.buff;
+	ring_buffer = server->fd_array[sc].buf_read.buff;
 	while (str[i])
 	{
-		if (server->ring_buffer.i >= BUF_SIZE)
-			server->ring_buffer.i = 0;
-		ring_buffer[server->ring_buffer.i] = str[i];
-		server->ring_buffer.i++;
+		if (server->fd_array[sc].buf_read.i >= BUF_SIZE)
+			server->fd_array[sc].buf_read.i = 0;
+		ring_buffer[server->fd_array[sc].buf_read.i] = str[i];
+		server->fd_array[sc].buf_read.i++;
 		i++;
 	}
+	printf("{%s}\n", ring_buffer);
 	if (ft_strchr(ring_buffer, '\n'))
 	{
 		convert_buffer(server, sc);
-		ft_bzero(&server->ring_buffer, sizeof(t_ring_buffer));
+		ft_bzero(&server->fd_array[sc].buf_read, sizeof(t_ring_buffer));
 	}
 }

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libft"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libft\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug/libft"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft">
+				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/libft/libft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug/libft"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/nle-bret/project/IRC/libft/includes"/>
+					<Add directory="/Users/nle-bret/project/IRC/libft/./includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 ft"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ft/fast">
+				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/libft/libft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug/libft"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/nle-bret/project/IRC/libft/includes"/>
+					<Add directory="/Users/nle-bret/project/IRC/libft/./includes"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 ft/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/includes/libft.h">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/bit/ft_bitdump.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/bit/ft_hexdump.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/bit/ft_printbit.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/bit/ft_reversebit.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/get_next_line.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_isalnum.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_isalpha.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_isascii.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_isdigit.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_islower.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_isprint.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/is/ft_isupper.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_del.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_print.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_push_after_node.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_push_back.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_push_before_node.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_push_front.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_size.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_str_split.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/list/ft_list_to_tab.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_bzero.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memalloc.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memccpy.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memchr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memcmp.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memcpy.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memdel.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memmove.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/mem/ft_memset.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_print_addr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putchar.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putchar_fd.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putendl.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putendl_fd.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putnbr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putnbr_base.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putnbr_fd.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putstr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/print/ft_putstr_fd.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_atoi.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_atoi_base.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_del_char.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_itoa.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_itoa_base.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_ltoa.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_nblen.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_stradd_char.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strcat.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strchr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strclr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strcmp.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strcpy.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strcpy_limit.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strdel.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strdup.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strequ.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_striter.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_striteri.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strjoin.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strjoin_free.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strlcat.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strlen.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strlen_limit.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strmap.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strmapi.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strncat.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strncmp.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strncpy.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strndup.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strnequ.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strnew.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strnstr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strrchr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strsplit.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strstr.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strsub.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_strtrim.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_tolower.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/str/ft_toupper.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tab/ft_free_tab.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tab/ft_tabjoin.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tab/ft_tablen.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tree/ft_tree_add.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tree/ft_tree_info_node.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tree/ft_tree_inorder.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tree/ft_tree_postorder.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/srcs/tree/ft_tree_preorder.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libft\"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/libft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libft\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

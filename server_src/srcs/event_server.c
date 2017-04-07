@@ -13,8 +13,9 @@ void		event_server_write(t_server *server, int ss)
 void		event_server_read(t_server *server, int sc)
 {
 	ssize_t		r;
+	char 		buff[BUF_SIZE + 1];
 
-	r = recv(sc, server->fd_array[sc].buf_read, BUF_SIZE, 0);
+	r = recv(sc, buff, BUF_SIZE, 0);
 	if (r <= 0)
 	{
 		close(sc);
@@ -23,10 +24,9 @@ void		event_server_read(t_server *server, int sc)
 	}
 	else
 	{
-		server->fd_array[sc].buf_read[r] = '\0';
-		ring_buffer_read(server, sc, server->fd_array[sc].buf_read);
-		//if (cmd(server, server->fd_array[sc].buf_read) == 0)
-		//	event_send_all(server, server->fd_array[sc].buf_read, (size_t)r, sc);
+		printf("client #%d write\n", sc);
+		buff[r] = '\0';
+		ring_buffer_read(server, sc, buff);
 	}
 }
 

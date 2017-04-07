@@ -18,25 +18,25 @@ enum	e_socket_type
 	CLIENT,
 };
 
-# define BUF_SIZE	4096
+# define BUF_SIZE	512
 # define NICKNAME_SIZE 9
 # define MAX(a,b)	((a > b) ? a : b)
-
-typedef struct 			s_fd
-{
-	enum e_socket_type	type;
-	void				(*ft_read)();
-	void				(*ft_write)();
-	char				buf_read[BUF_SIZE + 1];
-	char				buf_write[BUF_SIZE + 1];
-	char 				nickname[NICKNAME_SIZE + 1];
-}						t_fd;
 
 typedef	struct 			s_ring_buffer
 {
 	char 				buff[BUF_SIZE + 1];
 	int 				i;
 }						t_ring_buffer;
+
+typedef struct 			s_fd
+{
+	enum e_socket_type	type;
+	void				(*ft_read)();
+	void				(*ft_write)();
+	t_ring_buffer		buf_read;
+	t_ring_buffer		buf_write;
+	char 				nickname[NICKNAME_SIZE + 1];
+}						t_fd;
 
 typedef struct 			s_server
 {
@@ -47,7 +47,6 @@ typedef struct 			s_server
 	uint16_t 			port;
 	fd_set				readfds;
 	fd_set				writefds;
-	t_ring_buffer		ring_buffer;
 }						t_server;
 
 

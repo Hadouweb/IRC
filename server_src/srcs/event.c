@@ -7,8 +7,6 @@ void		event_check_socket(t_server *server)
 	i = 0;
 	while ((i < server->max_fd) && (server->ret_select > 0))
 	{
-		if (server->fd_array[i].type == SERVER)
-			;//printf("SERVER \n");
 		if (FD_ISSET(i, &server->readfds))
 		{
 			server->fd_array[i].ft_read(server, i);

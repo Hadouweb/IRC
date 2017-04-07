@@ -13,7 +13,7 @@ void			init_socket_fd(t_server *server)
 		if (server->fd_array[i].type != FREE)
 		{
 			FD_SET(i, &server->readfds);
-			if (strlen(server->fd_array[i].buf_write) > 0)
+			if (strlen(server->fd_array[i].buf_write.buff) > 0)
 				FD_SET(i, &server->writefds);
 			server->curr_nb = MAX(server->curr_nb, i);
 		}
