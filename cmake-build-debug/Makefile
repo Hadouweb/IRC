@@ -243,6 +243,141 @@ server_src/srcs/cmd.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd.c.s
 .PHONY : server_src/srcs/cmd.c.s
 
+server_src/srcs/cmd_join.o: server_src/srcs/cmd_join.c.o
+
+.PHONY : server_src/srcs/cmd_join.o
+
+# target to build an object file
+server_src/srcs/cmd_join.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_join.c.o
+.PHONY : server_src/srcs/cmd_join.c.o
+
+server_src/srcs/cmd_join.i: server_src/srcs/cmd_join.c.i
+
+.PHONY : server_src/srcs/cmd_join.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_join.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_join.c.i
+.PHONY : server_src/srcs/cmd_join.c.i
+
+server_src/srcs/cmd_join.s: server_src/srcs/cmd_join.c.s
+
+.PHONY : server_src/srcs/cmd_join.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_join.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_join.c.s
+.PHONY : server_src/srcs/cmd_join.c.s
+
+server_src/srcs/cmd_leave.o: server_src/srcs/cmd_leave.c.o
+
+.PHONY : server_src/srcs/cmd_leave.o
+
+# target to build an object file
+server_src/srcs/cmd_leave.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_leave.c.o
+.PHONY : server_src/srcs/cmd_leave.c.o
+
+server_src/srcs/cmd_leave.i: server_src/srcs/cmd_leave.c.i
+
+.PHONY : server_src/srcs/cmd_leave.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_leave.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_leave.c.i
+.PHONY : server_src/srcs/cmd_leave.c.i
+
+server_src/srcs/cmd_leave.s: server_src/srcs/cmd_leave.c.s
+
+.PHONY : server_src/srcs/cmd_leave.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_leave.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_leave.c.s
+.PHONY : server_src/srcs/cmd_leave.c.s
+
+server_src/srcs/cmd_msg.o: server_src/srcs/cmd_msg.c.o
+
+.PHONY : server_src/srcs/cmd_msg.o
+
+# target to build an object file
+server_src/srcs/cmd_msg.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.o
+.PHONY : server_src/srcs/cmd_msg.c.o
+
+server_src/srcs/cmd_msg.i: server_src/srcs/cmd_msg.c.i
+
+.PHONY : server_src/srcs/cmd_msg.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_msg.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.i
+.PHONY : server_src/srcs/cmd_msg.c.i
+
+server_src/srcs/cmd_msg.s: server_src/srcs/cmd_msg.c.s
+
+.PHONY : server_src/srcs/cmd_msg.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_msg.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.s
+.PHONY : server_src/srcs/cmd_msg.c.s
+
+server_src/srcs/cmd_nick.o: server_src/srcs/cmd_nick.c.o
+
+.PHONY : server_src/srcs/cmd_nick.o
+
+# target to build an object file
+server_src/srcs/cmd_nick.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o
+.PHONY : server_src/srcs/cmd_nick.c.o
+
+server_src/srcs/cmd_nick.i: server_src/srcs/cmd_nick.c.i
+
+.PHONY : server_src/srcs/cmd_nick.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_nick.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.i
+.PHONY : server_src/srcs/cmd_nick.c.i
+
+server_src/srcs/cmd_nick.s: server_src/srcs/cmd_nick.c.s
+
+.PHONY : server_src/srcs/cmd_nick.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_nick.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.s
+.PHONY : server_src/srcs/cmd_nick.c.s
+
+server_src/srcs/cmd_who.o: server_src/srcs/cmd_who.c.o
+
+.PHONY : server_src/srcs/cmd_who.o
+
+# target to build an object file
+server_src/srcs/cmd_who.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_who.c.o
+.PHONY : server_src/srcs/cmd_who.c.o
+
+server_src/srcs/cmd_who.i: server_src/srcs/cmd_who.c.i
+
+.PHONY : server_src/srcs/cmd_who.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_who.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_who.c.i
+.PHONY : server_src/srcs/cmd_who.c.i
+
+server_src/srcs/cmd_who.s: server_src/srcs/cmd_who.c.s
+
+.PHONY : server_src/srcs/cmd_who.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_who.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_who.c.s
+.PHONY : server_src/srcs/cmd_who.c.s
+
 server_src/srcs/config.o: server_src/srcs/config.c.o
 
 .PHONY : server_src/srcs/config.o
@@ -269,6 +404,33 @@ server_src/srcs/config.s: server_src/srcs/config.c.s
 server_src/srcs/config.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/config.c.s
 .PHONY : server_src/srcs/config.c.s
+
+server_src/srcs/debug.o: server_src/srcs/debug.c.o
+
+.PHONY : server_src/srcs/debug.o
+
+# target to build an object file
+server_src/srcs/debug.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/debug.c.o
+.PHONY : server_src/srcs/debug.c.o
+
+server_src/srcs/debug.i: server_src/srcs/debug.c.i
+
+.PHONY : server_src/srcs/debug.i
+
+# target to preprocess a source file
+server_src/srcs/debug.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/debug.c.i
+.PHONY : server_src/srcs/debug.c.i
+
+server_src/srcs/debug.s: server_src/srcs/debug.c.s
+
+.PHONY : server_src/srcs/debug.s
+
+# target to generate assembly for a file
+server_src/srcs/debug.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/debug.c.s
+.PHONY : server_src/srcs/debug.c.s
 
 server_src/srcs/error.o: server_src/srcs/error.c.o
 
@@ -507,9 +669,27 @@ help:
 	@echo "... server_src/srcs/cmd.o"
 	@echo "... server_src/srcs/cmd.i"
 	@echo "... server_src/srcs/cmd.s"
+	@echo "... server_src/srcs/cmd_join.o"
+	@echo "... server_src/srcs/cmd_join.i"
+	@echo "... server_src/srcs/cmd_join.s"
+	@echo "... server_src/srcs/cmd_leave.o"
+	@echo "... server_src/srcs/cmd_leave.i"
+	@echo "... server_src/srcs/cmd_leave.s"
+	@echo "... server_src/srcs/cmd_msg.o"
+	@echo "... server_src/srcs/cmd_msg.i"
+	@echo "... server_src/srcs/cmd_msg.s"
+	@echo "... server_src/srcs/cmd_nick.o"
+	@echo "... server_src/srcs/cmd_nick.i"
+	@echo "... server_src/srcs/cmd_nick.s"
+	@echo "... server_src/srcs/cmd_who.o"
+	@echo "... server_src/srcs/cmd_who.i"
+	@echo "... server_src/srcs/cmd_who.s"
 	@echo "... server_src/srcs/config.o"
 	@echo "... server_src/srcs/config.i"
 	@echo "... server_src/srcs/config.s"
+	@echo "... server_src/srcs/debug.o"
+	@echo "... server_src/srcs/debug.i"
+	@echo "... server_src/srcs/debug.s"
 	@echo "... server_src/srcs/error.o"
 	@echo "... server_src/srcs/error.i"
 	@echo "... server_src/srcs/error.s"

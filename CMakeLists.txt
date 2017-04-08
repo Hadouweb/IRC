@@ -25,7 +25,13 @@ set(SRCS_SERVER
         server_src/srcs/event_client.c
         server_src/srcs/send.c
         server_src/srcs/cmd.c
+        server_src/srcs/cmd_nick.c
+        server_src/srcs/cmd_join.c
+        server_src/srcs/cmd_leave.c
+        server_src/srcs/cmd_who.c
+        server_src/srcs/cmd_msg.c
         server_src/srcs/ring_buffer.c
+        server_src/srcs/debug.c
     )
 set(HEADER_SERVER server_src/includes/server.h)
 

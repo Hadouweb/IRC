@@ -529,7 +529,25 @@
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd.c">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_join.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_leave.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_msg.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_nick.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_who.c">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/config.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/debug.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/error.c">

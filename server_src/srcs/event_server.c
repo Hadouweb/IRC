@@ -18,9 +18,9 @@ void		event_server_read(t_server *server, int sc)
 	r = recv(sc, buff, BUF_SIZE, 0);
 	if (r <= 0)
 	{
+		leave_channel(server, sc);
 		close(sc);
 		ft_bzero(&server->fd_array[sc], sizeof(t_fd));
-		printf("client #%d gone away\n", sc);
 	}
 	else
 	{
@@ -43,10 +43,18 @@ void		event_server_accept(t_server *server, int ss)
 	printf("New client #%d from %s:%d\n", sc,
 		   inet_ntoa(sock_in.sin_addr), ntohs(sock_in.sin_port));
 	ft_bzero(&server->fd_array[sc], sizeof(t_fd));
-	set_client(server, sc);
+	set_new_client(server, sc);
+	printf("curr_nb: %d %d\n", server->curr_nb, MAX_CLIENT + 1);
+	if (server->curr_nb >= MAX_CLIENT + 1)
+	{
+		send_error(server, sc, "Sorry the server is full\n", NULL);
+		ft_bzero(&server->fd_array[sc], sizeof(t_fd));
+		close(sc);
+	}
 }
 
-void		event_server_print_log(t_server *server, int sc, char *str)
+void		event_server_print_log(t_server *server, int sc,
+				char *str, char *str2)
 {
 	if (server)
 		;
@@ -55,5 +63,7 @@ void		event_server_print_log(t_server *server, int sc, char *str)
 	ft_putstr("\033[0m: ");
 	ft_putstr("\033[31;1m");
 	ft_putstr(str);
+	ft_putstr(" ");
+	ft_putstr(str2);
 	ft_putstr("\033[0m");
 }

@@ -20,7 +20,13 @@ SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/event_client.c\
         $(SRCS_PATH)/send.c\
         $(SRCS_PATH)/cmd.c\
+        $(SRCS_PATH)/cmd_nick.c\
+        $(SRCS_PATH)/cmd_join.c\
+        $(SRCS_PATH)/cmd_leave.c\
+        $(SRCS_PATH)/cmd_who.c\
+        $(SRCS_PATH)/cmd_msg.c\
         $(SRCS_PATH)/ring_buffer.c\
+        $(SRCS_PATH)/debug.c\
 
 OBJ = $(SRC:.c=.o)
 

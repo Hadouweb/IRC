@@ -38,3 +38,44 @@ char 	*get_formated_msg(t_server *server, int sc, char *msg)
 	msg = ft_strjoin(name, msg);
 	return msg;
 }
+
+char 	*get_formated_private_msg(t_server *server, int sc, char *msg)
+{
+	char 	*name;
+
+	name = server->fd_array[sc].nickname;
+	name = ft_strjoin("\033[35;1m<", name);
+	name = ft_strjoin_free(name, "> \033[0m\0", 1);
+	msg = ft_strjoin(name, msg);
+	return msg;
+}
+
+void	delete_chan(t_list *list, t_channel *chan)
+{
+	t_link	*n_prev;
+	t_link	*n_next;
+
+	if (chan == NULL || list == NULL || ft_strcmp(chan->name, DEFAULT_CHAN) == 0)
+		return ;
+	printf("delete channel %s\n", chan->name);
+	n_prev = chan->link.prev;
+	n_next = chan->link.next;
+	if (n_prev != NULL && n_next != NULL)
+	{
+		n_prev->next = n_next;
+		n_next->prev = n_prev;
+	}
+	else if (n_prev != NULL)
+	{
+		list->tail = n_prev;
+		n_prev->next = NULL;
+	}
+	else if (n_next != NULL)
+	{
+		list->head = n_next;
+		n_next->prev = NULL;
+	}
+	list->size--;
+	free(chan);
+	chan = NULL;
+}

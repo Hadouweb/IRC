@@ -19,3 +19,9 @@ void	print_error_exit(char *str, char *file, int line)
 	ft_putchar('\n');
 	exit(1);
 }
+
+void	send_error(t_server *server, int sc, char *error, char *error2)
+{
+	event_send_error(server, sc, error, error2);
+	event_server_print_log(server, sc, error, error2);
+}
