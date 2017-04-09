@@ -37,58 +37,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="BIRCD">
-				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/BIRCD" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/nle-bret/project/IRC/libft/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src/includes"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 BIRCD"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="BIRCD/fast">
-				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/BIRCD" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/nle-bret/project/IRC/libft/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src/includes"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 BIRCD/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="server">
 				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug"/>
@@ -143,60 +91,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="client">
-				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/nle-bret/project/IRC/libft/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/libft/./includes"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="client/fast">
-				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/nle-bret/project/IRC/libft/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/client_src/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src"/>
-					<Add directory="/Users/nle-bret/project/IRC/server_src/includes"/>
-					<Add directory="/Users/nle-bret/project/IRC/libft/./includes"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/nle-bret/project/IRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="ft">
 				<Option output="/Users/nle-bret/project/IRC/cmake-build-debug/libft/libft.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/nle-bret/project/IRC/cmake-build-debug/libft"/>
@@ -244,18 +138,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/nle-bret/project/IRC/bircd/bircd.h">
-			<Option target="BIRCD"/>
-		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/bircd/main.c">
-			<Option target="BIRCD"/>
-		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/client_src/includes/client.h">
-			<Option target="client"/>
-		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/main.c">
-			<Option target="client"/>
-		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/libft/includes/libft.h">
 			<Option target="ft"/>
 		</Unit>
@@ -544,19 +426,10 @@
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_who.c">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/config.c">
-			<Option target="server"/>
-		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/debug.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/error.c">
-			<Option target="server"/>
-		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/event.c">
-			<Option target="server"/>
-		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/event_client.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/event_server.c">
@@ -565,10 +438,22 @@
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/main.c">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/main_loop.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/ring_buffer.c">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/send.c">
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/set_action.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/set_client.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/set_server.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/util.c">

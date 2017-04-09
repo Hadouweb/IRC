@@ -16,7 +16,37 @@ t_channel	*get_channel_by_name(t_server *server, char *name)
 	return (NULL);
 }
 
-void	leave_channel(t_server *server, int sc)
+void	delete_chan(t_list *list, t_channel *chan)
+{
+	t_link	*n_prev;
+	t_link	*n_next;
+
+	if (chan == NULL || list == NULL || ft_strcmp(chan->name, DEFAULT_CHAN) == 0)
+		return ;
+	printf("delete channel %s\n", chan->name);
+	n_prev = chan->link.prev;
+	n_next = chan->link.next;
+	if (n_prev != NULL && n_next != NULL)
+	{
+		n_prev->next = n_next;
+		n_next->prev = n_prev;
+	}
+	else if (n_prev != NULL)
+	{
+		list->tail = n_prev;
+		n_prev->next = NULL;
+	}
+	else if (n_next != NULL)
+	{
+		list->head = n_next;
+		n_next->prev = NULL;
+	}
+	list->size--;
+	free(chan);
+	chan = NULL;
+}
+
+void		leave_channel(t_server *server, int sc)
 {
 	if (server->fd_array[sc].curr_chan != NULL)
 	{
@@ -28,7 +58,7 @@ void	leave_channel(t_server *server, int sc)
 	debug_print_all_channel(server);
 }
 
-void	try_leave_channel(t_server *server, int sc, char *name)
+void		try_leave_channel(t_server *server, int sc, char *name)
 {
 	t_channel	*chan;
 
@@ -41,7 +71,7 @@ void	try_leave_channel(t_server *server, int sc, char *name)
 		join_channel(server, sc, DEFAULT_CHAN);
 }
 
-void	cmd_leave(t_server *server, int sc, char *cmd)
+void		cmd_leave(t_server *server, int sc, char *cmd)
 {
 	char 	*name;
 	int 	i;

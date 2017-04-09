@@ -6,7 +6,6 @@ void	cmd_who(t_server *server, int sc, char *cmd)
 	int 		i;
 	char 		*all_name;
 
-	printf("CMD WHO\n");
 	chan = server->fd_array[sc].curr_chan;
 	i = 0;
 	all_name = NULL;
@@ -28,5 +27,5 @@ void	cmd_who(t_server *server, int sc, char *cmd)
 		}
 		i++;
 	}
-	send_to_one_client(server, sc, all_name);
+	action_send_to_one_client(server, sc, all_name);
 }

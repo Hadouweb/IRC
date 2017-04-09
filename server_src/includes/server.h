@@ -63,50 +63,51 @@ typedef struct 			s_server
 	t_list				channel_list;
 }						t_server;
 
+void 					cmd(t_server *server, int sc, char *cmd);
 
-void					init_socket_fd(t_server *server);
-void					set_server_config(t_server *server);
-void					init_server_config(t_server *server, uint16_t port);
-void					set_new_client(t_server *server, int cs);
-void 					send_to_one_client(t_server *server, int sc, char *msg);
+void					cmd_join(t_server *server, int sc, char *cmd);
+void					join_channel(t_server *server, int sc, char *name);
 
-void					event_check_socket(t_server *server);
+void					cmd_leave(t_server *server, int sc, char *cmd);
+void					leave_channel(t_server *server, int sc);
+void					try_leave_channel(t_server *server, int sc, char *name);
+t_channel				*get_channel_by_name(t_server *server, char *name);
+void					delete_chan(t_list *list, t_channel *chan);
 
-char 					*get_formated_private_msg(t_server *server, int sc, char *msg);
 void					cmd_msg(t_server *server, int sc, char *cmd);
 
-void					event_send_all(t_server *server, int sc, char *msg);
-void					event_send_error(t_server *server, int sc,
-							char *error, char *error2);
+void					cmd_nick(t_server *server, int sc, char *cmd);
 
-void					event_server_write(t_server *server, int ss);
-void					event_server_read(t_server *server, int ss);
-void					event_server_accept(t_server *server, int sc);
-void					event_server_print_log(t_server *server, int sc,
-							char *str, char *str2);
+void					cmd_who(t_server *server, int sc, char *cmd);
 
-char 					*get_formated_msg(t_server *server, int sc, char *msg);
-void					delete_chan(t_list *list, t_channel *chan);
+void					debug_print_channel(void *ptr);
+void					debug_print_all_channel(t_server *server);
 
 void					print_usage(char *prog_name);
 void					print_error_exit(char *str, char *file, int line);
 void					send_error(t_server *server, int sc, char *error, char *error2);
 
-void 					cmd(t_server *server, int sc, char *cmd);
+void					event_server_write(t_server *server, int sc);
+void					event_server_read(t_server *server, int sc);
+void					event_server_accept(t_server *server, int ss);
 
-void					cmd_nick(t_server *server, int sc, char *cmd);
+void					set_socket(t_server *server);
+void					main_loop(t_server *server);
+void					is_set_socket(t_server *server);
 
-void					cmd_join(t_server *server, int sc, char *cmd);
-void					join_channel(t_server *server, int sc, char *name);
+void					server_print_log(t_server *server, int sc, char *str, char *str2);
 
-t_channel				*get_channel_by_name(t_server *server, char *name);
-void					cmd_leave(t_server *server, int sc, char *cmd);
-void					cmd_who(t_server *server, int sc, char *cmd);
+void					ring_buffer_read(t_server *server, int sc, char *str);
 
-void					ring_buffer_read(t_server *server, int cs, char *msg);
-void					leave_channel(t_server *server, int sc);
+void					action_send_all(t_server *server, int sc, char *msg);
+void 					action_send_to_one_client(t_server *server, int sc, char *msg);
+void					action_send_error(t_server *server, int sc, char *error, char *error2);
 
-void					debug_print_channel(void *ptr);
-void					debug_print_all_channel(t_server *server);
+void					set_client_socket(t_server *server, int sc);
+
+void					init_server(t_server *server, uint16_t port);
+
+char 					*get_formated_msg(t_server *server, int sc, char *msg);
+char 					*get_formated_private_msg(t_server *server, int sc, char *msg);
 
 #endif

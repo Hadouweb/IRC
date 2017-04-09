@@ -1,43 +1,6 @@
 #include "server.h"
 
-void			init_socket_fd(t_server *server)
-{
-	int		i;
-
-	i = 0;
-	server->curr_nb = 0;
-	FD_ZERO(&server->readfds);
-	FD_ZERO(&server->writefds);
-	while (i < server->max_fd)
-	{
-		if (server->fd_array[i].type != FREE)
-		{
-			FD_SET(i, &server->readfds);
-			if (strlen(server->fd_array[i].buf_write.buff) > 0)
-				FD_SET(i, &server->writefds);
-			server->curr_nb = MAX(server->curr_nb, i);
-		}
-		i++;
-	}
-}
-
-void			set_new_client(t_server *server, int sc)
-{
-	char 	*default_name;
-
-	if (server->fd_array[sc].type != SERVER)
-	{
-		default_name = ft_strjoin_free("Guest", ft_itoa(sc), 2);
-		ft_strcpy(server->fd_array[sc].nickname, default_name);
-		server->fd_array[sc].id = sc;
-		server->fd_array[sc].type = CLIENT;
-		server->fd_array[sc].ft_read = event_server_read;
-		server->fd_array[sc].ft_write = event_server_write;
-		join_channel(server, sc, DEFAULT_CHAN);
-	}
-}
-
-void			set_server_config(t_server *server)
+static void		set_server_socket(t_server *server)
 {
 	int					socket_server;
 	struct sockaddr_in	sock_in;
@@ -60,7 +23,7 @@ void			set_server_config(t_server *server)
 	server->fd_array[socket_server].ft_read = event_server_accept;
 }
 
-void			init_server_config(t_server *server, uint16_t port)
+void			init_server(t_server *server, uint16_t port)
 {
 	struct rlimit	rlp;
 	int 			i;
@@ -78,6 +41,6 @@ void			init_server_config(t_server *server, uint16_t port)
 		i++;
 	}
 	server->port = port;
-	set_server_config(server);
+	set_server_socket(server);
 }
 

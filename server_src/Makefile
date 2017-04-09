@@ -14,11 +14,11 @@ LIBNAME = $(LIBFT_PATH)/libft.a
 SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/error.c\
         $(SRCS_PATH)/util.c\
-        $(SRCS_PATH)/config.c\
-        $(SRCS_PATH)/event.c\
+        $(SRCS_PATH)/set_server.c\
+        $(SRCS_PATH)/set_client.c\
+        $(SRCS_PATH)/main_loop.c\
         $(SRCS_PATH)/event_server.c\
-        $(SRCS_PATH)/event_client.c\
-        $(SRCS_PATH)/send.c\
+        $(SRCS_PATH)/set_action.c\
         $(SRCS_PATH)/cmd.c\
         $(SRCS_PATH)/cmd_nick.c\
         $(SRCS_PATH)/cmd_join.c\
@@ -27,6 +27,7 @@ SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/cmd_msg.c\
         $(SRCS_PATH)/ring_buffer.c\
         $(SRCS_PATH)/debug.c\
+        $(SRCS_PATH)/print_log_bonus.c\
 
 OBJ = $(SRC:.c=.o)
 

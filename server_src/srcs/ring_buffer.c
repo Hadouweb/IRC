@@ -1,20 +1,14 @@
 #include "server.h"
 
-void	handle_buf(t_server *server, int sc, char *msg)
+static void		call_action(t_server *server, int sc, char *msg)
 {
 	if (msg[0] == '/')
-	{
 		cmd(server, sc, msg);
-	}
 	else
-	{
-		printf("\t[MSG]\n");
-		printf("\t%s\n", msg);
-		event_send_all(server, sc, msg);
-	}
+		action_send_all(server, sc, msg);
 }
 
-void 	convert_buffer(t_server *server, int sc)
+static void 	convert_buffer(t_server *server, int sc)
 {
 	char 	buffer[BUF_SIZE + 1];
 	char 	*ring_buffer;
@@ -26,7 +20,7 @@ void 	convert_buffer(t_server *server, int sc)
 	j = 0;
 	ring_buffer = server->fd_array[sc].buf_read.buff;
 	if (ring_buffer[ft_strlen(ring_buffer) - 1] == '\n')
-		handle_buf(server, sc, ring_buffer);
+		call_action(server, sc, ring_buffer);
 	else
 	{
 		while (ring_buffer[i] != '\n')
@@ -37,11 +31,11 @@ void 	convert_buffer(t_server *server, int sc)
 				i = 0;
 			buffer[j++] = ring_buffer[i++];
 		}
-		handle_buf(server, sc, buffer);
+		call_action(server, sc, buffer);
 	}
 }
 
-void	ring_buffer_read(t_server *server, int sc, char *str)
+void			ring_buffer_read(t_server *server, int sc, char *str)
 {
 	int 	i;
 	char 	*ring_buffer;
@@ -56,7 +50,6 @@ void	ring_buffer_read(t_server *server, int sc, char *str)
 		server->fd_array[sc].buf_read.i++;
 		i++;
 	}
-	printf("{%s}\n", ring_buffer);
 	if (ft_strchr(ring_buffer, '\n'))
 	{
 		convert_buffer(server, sc);

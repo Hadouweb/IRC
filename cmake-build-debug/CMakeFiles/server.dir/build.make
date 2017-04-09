@@ -129,57 +129,81 @@ CMakeFiles/server.dir/server_src/srcs/util.c.o.provides: CMakeFiles/server.dir/s
 CMakeFiles/server.dir/server_src/srcs/util.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/util.c.o
 
 
-CMakeFiles/server.dir/server_src/srcs/config.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server_src/srcs/config.c.o: ../server_src/srcs/config.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/server.dir/server_src/srcs/config.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/config.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/config.c
+CMakeFiles/server.dir/server_src/srcs/set_server.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server_src/srcs/set_server.c.o: ../server_src/srcs/set_server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/server.dir/server_src/srcs/set_server.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/set_server.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/set_server.c
 
-CMakeFiles/server.dir/server_src/srcs/config.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/config.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/config.c > CMakeFiles/server.dir/server_src/srcs/config.c.i
+CMakeFiles/server.dir/server_src/srcs/set_server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/set_server.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/set_server.c > CMakeFiles/server.dir/server_src/srcs/set_server.c.i
 
-CMakeFiles/server.dir/server_src/srcs/config.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/config.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/config.c -o CMakeFiles/server.dir/server_src/srcs/config.c.s
+CMakeFiles/server.dir/server_src/srcs/set_server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/set_server.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/set_server.c -o CMakeFiles/server.dir/server_src/srcs/set_server.c.s
 
-CMakeFiles/server.dir/server_src/srcs/config.c.o.requires:
+CMakeFiles/server.dir/server_src/srcs/set_server.c.o.requires:
 
-.PHONY : CMakeFiles/server.dir/server_src/srcs/config.c.o.requires
+.PHONY : CMakeFiles/server.dir/server_src/srcs/set_server.c.o.requires
 
-CMakeFiles/server.dir/server_src/srcs/config.c.o.provides: CMakeFiles/server.dir/server_src/srcs/config.c.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/config.c.o.provides.build
-.PHONY : CMakeFiles/server.dir/server_src/srcs/config.c.o.provides
+CMakeFiles/server.dir/server_src/srcs/set_server.c.o.provides: CMakeFiles/server.dir/server_src/srcs/set_server.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_server.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server_src/srcs/set_server.c.o.provides
 
-CMakeFiles/server.dir/server_src/srcs/config.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/config.c.o
+CMakeFiles/server.dir/server_src/srcs/set_server.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/set_server.c.o
 
 
-CMakeFiles/server.dir/server_src/srcs/event.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server_src/srcs/event.c.o: ../server_src/srcs/event.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/server.dir/server_src/srcs/event.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/event.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/event.c
+CMakeFiles/server.dir/server_src/srcs/set_client.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server_src/srcs/set_client.c.o: ../server_src/srcs/set_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/server.dir/server_src/srcs/set_client.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/set_client.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/set_client.c
 
-CMakeFiles/server.dir/server_src/srcs/event.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/event.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/event.c > CMakeFiles/server.dir/server_src/srcs/event.c.i
+CMakeFiles/server.dir/server_src/srcs/set_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/set_client.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/set_client.c > CMakeFiles/server.dir/server_src/srcs/set_client.c.i
 
-CMakeFiles/server.dir/server_src/srcs/event.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/event.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/event.c -o CMakeFiles/server.dir/server_src/srcs/event.c.s
+CMakeFiles/server.dir/server_src/srcs/set_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/set_client.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/set_client.c -o CMakeFiles/server.dir/server_src/srcs/set_client.c.s
 
-CMakeFiles/server.dir/server_src/srcs/event.c.o.requires:
+CMakeFiles/server.dir/server_src/srcs/set_client.c.o.requires:
 
-.PHONY : CMakeFiles/server.dir/server_src/srcs/event.c.o.requires
+.PHONY : CMakeFiles/server.dir/server_src/srcs/set_client.c.o.requires
 
-CMakeFiles/server.dir/server_src/srcs/event.c.o.provides: CMakeFiles/server.dir/server_src/srcs/event.c.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event.c.o.provides.build
-.PHONY : CMakeFiles/server.dir/server_src/srcs/event.c.o.provides
+CMakeFiles/server.dir/server_src/srcs/set_client.c.o.provides: CMakeFiles/server.dir/server_src/srcs/set_client.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_client.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server_src/srcs/set_client.c.o.provides
 
-CMakeFiles/server.dir/server_src/srcs/event.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/event.c.o
+CMakeFiles/server.dir/server_src/srcs/set_client.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/set_client.c.o
+
+
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.o: ../server_src/srcs/main_loop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/server.dir/server_src/srcs/main_loop.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/main_loop.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/main_loop.c
+
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/main_loop.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/main_loop.c > CMakeFiles/server.dir/server_src/srcs/main_loop.c.i
+
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/main_loop.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/main_loop.c -o CMakeFiles/server.dir/server_src/srcs/main_loop.c.s
+
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.requires:
+
+.PHONY : CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.requires
+
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.provides: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.provides
+
+CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o
 
 
 CMakeFiles/server.dir/server_src/srcs/event_server.c.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/server_src/srcs/event_server.c.o: ../server_src/srcs/event_server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/server.dir/server_src/srcs/event_server.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/server.dir/server_src/srcs/event_server.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/event_server.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/event_server.c
 
 CMakeFiles/server.dir/server_src/srcs/event_server.c.i: cmake_force
@@ -201,52 +225,28 @@ CMakeFiles/server.dir/server_src/srcs/event_server.c.o.provides: CMakeFiles/serv
 CMakeFiles/server.dir/server_src/srcs/event_server.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/event_server.c.o
 
 
-CMakeFiles/server.dir/server_src/srcs/event_client.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server_src/srcs/event_client.c.o: ../server_src/srcs/event_client.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/server.dir/server_src/srcs/event_client.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/event_client.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/event_client.c
+CMakeFiles/server.dir/server_src/srcs/set_action.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server_src/srcs/set_action.c.o: ../server_src/srcs/set_action.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/server.dir/server_src/srcs/set_action.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/set_action.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/set_action.c
 
-CMakeFiles/server.dir/server_src/srcs/event_client.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/event_client.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/event_client.c > CMakeFiles/server.dir/server_src/srcs/event_client.c.i
+CMakeFiles/server.dir/server_src/srcs/set_action.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/set_action.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/set_action.c > CMakeFiles/server.dir/server_src/srcs/set_action.c.i
 
-CMakeFiles/server.dir/server_src/srcs/event_client.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/event_client.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/event_client.c -o CMakeFiles/server.dir/server_src/srcs/event_client.c.s
+CMakeFiles/server.dir/server_src/srcs/set_action.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/set_action.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/set_action.c -o CMakeFiles/server.dir/server_src/srcs/set_action.c.s
 
-CMakeFiles/server.dir/server_src/srcs/event_client.c.o.requires:
+CMakeFiles/server.dir/server_src/srcs/set_action.c.o.requires:
 
-.PHONY : CMakeFiles/server.dir/server_src/srcs/event_client.c.o.requires
+.PHONY : CMakeFiles/server.dir/server_src/srcs/set_action.c.o.requires
 
-CMakeFiles/server.dir/server_src/srcs/event_client.c.o.provides: CMakeFiles/server.dir/server_src/srcs/event_client.c.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event_client.c.o.provides.build
-.PHONY : CMakeFiles/server.dir/server_src/srcs/event_client.c.o.provides
+CMakeFiles/server.dir/server_src/srcs/set_action.c.o.provides: CMakeFiles/server.dir/server_src/srcs/set_action.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_action.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server_src/srcs/set_action.c.o.provides
 
-CMakeFiles/server.dir/server_src/srcs/event_client.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/event_client.c.o
-
-
-CMakeFiles/server.dir/server_src/srcs/send.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server_src/srcs/send.c.o: ../server_src/srcs/send.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/server.dir/server_src/srcs/send.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/send.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/send.c
-
-CMakeFiles/server.dir/server_src/srcs/send.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/send.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/send.c > CMakeFiles/server.dir/server_src/srcs/send.c.i
-
-CMakeFiles/server.dir/server_src/srcs/send.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/send.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/send.c -o CMakeFiles/server.dir/server_src/srcs/send.c.s
-
-CMakeFiles/server.dir/server_src/srcs/send.c.o.requires:
-
-.PHONY : CMakeFiles/server.dir/server_src/srcs/send.c.o.requires
-
-CMakeFiles/server.dir/server_src/srcs/send.c.o.provides: CMakeFiles/server.dir/server_src/srcs/send.c.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/send.c.o.provides.build
-.PHONY : CMakeFiles/server.dir/server_src/srcs/send.c.o.provides
-
-CMakeFiles/server.dir/server_src/srcs/send.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/send.c.o
+CMakeFiles/server.dir/server_src/srcs/set_action.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/set_action.c.o
 
 
 CMakeFiles/server.dir/server_src/srcs/cmd.c.o: CMakeFiles/server.dir/flags.make
@@ -441,16 +441,40 @@ CMakeFiles/server.dir/server_src/srcs/debug.c.o.provides: CMakeFiles/server.dir/
 CMakeFiles/server.dir/server_src/srcs/debug.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/debug.c.o
 
 
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o: ../server_src/srcs/print_log_bonus.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c
+
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c > CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.i
+
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c -o CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.s
+
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.requires:
+
+.PHONY : CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.requires
+
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.provides: CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.provides
+
+CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o
+
+
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/server_src/srcs/main.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/error.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/util.c.o" \
-"CMakeFiles/server.dir/server_src/srcs/config.c.o" \
-"CMakeFiles/server.dir/server_src/srcs/event.c.o" \
+"CMakeFiles/server.dir/server_src/srcs/set_server.c.o" \
+"CMakeFiles/server.dir/server_src/srcs/set_client.c.o" \
+"CMakeFiles/server.dir/server_src/srcs/main_loop.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/event_server.c.o" \
-"CMakeFiles/server.dir/server_src/srcs/event_client.c.o" \
-"CMakeFiles/server.dir/server_src/srcs/send.c.o" \
+"CMakeFiles/server.dir/server_src/srcs/set_action.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/cmd.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/cmd_join.c.o" \
@@ -458,7 +482,8 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/server_src/srcs/cmd_who.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.o" \
-"CMakeFiles/server.dir/server_src/srcs/debug.c.o"
+"CMakeFiles/server.dir/server_src/srcs/debug.c.o" \
+"CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
@@ -466,11 +491,11 @@ server_EXTERNAL_OBJECTS =
 server: CMakeFiles/server.dir/server_src/srcs/main.c.o
 server: CMakeFiles/server.dir/server_src/srcs/error.c.o
 server: CMakeFiles/server.dir/server_src/srcs/util.c.o
-server: CMakeFiles/server.dir/server_src/srcs/config.c.o
-server: CMakeFiles/server.dir/server_src/srcs/event.c.o
+server: CMakeFiles/server.dir/server_src/srcs/set_server.c.o
+server: CMakeFiles/server.dir/server_src/srcs/set_client.c.o
+server: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o
 server: CMakeFiles/server.dir/server_src/srcs/event_server.c.o
-server: CMakeFiles/server.dir/server_src/srcs/event_client.c.o
-server: CMakeFiles/server.dir/server_src/srcs/send.c.o
+server: CMakeFiles/server.dir/server_src/srcs/set_action.c.o
 server: CMakeFiles/server.dir/server_src/srcs/cmd.c.o
 server: CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o
 server: CMakeFiles/server.dir/server_src/srcs/cmd_join.c.o
@@ -479,10 +504,11 @@ server: CMakeFiles/server.dir/server_src/srcs/cmd_who.c.o
 server: CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.o
 server: CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.o
 server: CMakeFiles/server.dir/server_src/srcs/debug.c.o
+server: CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o
 server: CMakeFiles/server.dir/build.make
 server: libft/libft.a
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -493,11 +519,11 @@ CMakeFiles/server.dir/build: server
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/main.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/error.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/util.c.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/config.c.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/event.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/set_server.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/set_client.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/event_server.c.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/event_client.c.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/send.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/set_action.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd_join.c.o.requires
@@ -506,6 +532,7 @@ CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd_who.c.
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/debug.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 

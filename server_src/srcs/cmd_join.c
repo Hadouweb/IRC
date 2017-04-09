@@ -1,6 +1,6 @@
 #include "server.h"
 
-t_channel	*add_channel(t_server *server, char *name)
+static t_channel	*add_channel(t_server *server, char *name)
 {
 	t_channel	*chan;
 
@@ -18,11 +18,10 @@ t_channel	*add_channel(t_server *server, char *name)
 	return (chan);
 }
 
-void	join_channel(t_server *server, int sc, char *name)
+void				join_channel(t_server *server, int sc, char *name)
 {
 	t_channel	*chan;
 
-	printf("client #%d want join the channel %s\n", sc, name);
 	leave_channel(server, sc);
 	chan = add_channel(server, name);
 	chan->client_connected[sc] = 1;
@@ -32,7 +31,7 @@ void	join_channel(t_server *server, int sc, char *name)
 }
 
 
-void	cmd_join(t_server *server, int sc, char *cmd)
+void				cmd_join(t_server *server, int sc, char *cmd)
 {
 	char 	*name;
 	int 	i;

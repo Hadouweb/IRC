@@ -1,13 +1,11 @@
 #include "server.h"
 
-void		event_server_write(t_server *server, int ss)
+void		event_server_write(t_server *server, int sc)
 {
-	//printf("server_write\n");
-	if (server && ss)
-		;
-	//send(socket_fd, server->fd_array[socket_fd].buf_write,
-	//ft_strlen(server->fd_array[socket_fd].buf_write), 0);
-	//memset(server->fd_array[socket_fd].buf_write, 0, BUF_SIZE + 1);
+	printf("server_write\n");
+	send(sc, server->fd_array[sc].buf_write.buff,
+	ft_strlen(server->fd_array[sc].buf_write.buff), 0);
+	ft_bzero(&server->fd_array[sc].buf_write, sizeof(t_ring_buffer));
 }
 
 void		event_server_read(t_server *server, int sc)
@@ -43,7 +41,7 @@ void		event_server_accept(t_server *server, int ss)
 	printf("New client #%d from %s:%d\n", sc,
 		   inet_ntoa(sock_in.sin_addr), ntohs(sock_in.sin_port));
 	ft_bzero(&server->fd_array[sc], sizeof(t_fd));
-	set_new_client(server, sc);
+	set_client_socket(server, sc);
 	printf("curr_nb: %d %d\n", server->curr_nb, MAX_CLIENT + 1);
 	if (server->curr_nb >= MAX_CLIENT + 1)
 	{
@@ -51,19 +49,4 @@ void		event_server_accept(t_server *server, int ss)
 		ft_bzero(&server->fd_array[sc], sizeof(t_fd));
 		close(sc);
 	}
-}
-
-void		event_server_print_log(t_server *server, int sc,
-				char *str, char *str2)
-{
-	if (server)
-		;
-	ft_putstr("\033[33;1m");
-	ft_putstr(server->fd_array[sc].nickname);
-	ft_putstr("\033[0m: ");
-	ft_putstr("\033[31;1m");
-	ft_putstr(str);
-	ft_putstr(" ");
-	ft_putstr(str2);
-	ft_putstr("\033[0m");
 }

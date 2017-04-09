@@ -19,11 +19,11 @@ set(SRCS_SERVER
         server_src/srcs/main.c
         server_src/srcs/error.c
         server_src/srcs/util.c
-        server_src/srcs/config.c
-        server_src/srcs/event.c
+        server_src/srcs/set_server.c
+        server_src/srcs/set_client.c
+        server_src/srcs/main_loop.c
         server_src/srcs/event_server.c
-        server_src/srcs/event_client.c
-        server_src/srcs/send.c
+        server_src/srcs/set_action.c
         server_src/srcs/cmd.c
         server_src/srcs/cmd_nick.c
         server_src/srcs/cmd_join.c
@@ -32,17 +32,17 @@ set(SRCS_SERVER
         server_src/srcs/cmd_msg.c
         server_src/srcs/ring_buffer.c
         server_src/srcs/debug.c
+        server_src/srcs/print_log_bonus.c
     )
 set(HEADER_SERVER server_src/includes/server.h)
 
 
-set(SRC_BIRCD
-    bircd/bircd.h
-    bircd/main.c)
+#set(SRC_BIRCD
+#    bircd/bircd.h)
 
-add_executable(client ${SRCS_CLIENT} ${HEADER_CLIENT})
+#add_executable(client ${SRCS_CLIENT} ${HEADER_CLIENT})
 add_executable(server ${SRCS_SERVER} ${HEADER_SERVER})
-add_executable(BIRCD ${SRC_BIRCD})
+#add_executable(BIRCD ${SRC_BIRCD})
 
-target_link_libraries(client ft)
+#target_link_libraries(client ft)
 target_link_libraries(server ft)

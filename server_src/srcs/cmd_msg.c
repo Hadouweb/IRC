@@ -1,6 +1,6 @@
 #include "server.h"
 
-t_fd	*find_client_by_name(t_server *server, char *name)
+static t_fd		*find_client_by_name(t_server *server, char *name)
 {
 	t_fd		*client;
 	int 		i;
@@ -16,7 +16,7 @@ t_fd	*find_client_by_name(t_server *server, char *name)
 	return (NULL);
 }
 
-void	check_msg_cmd(t_server *server, int sc, char *name, char *msg)
+static void		check_msg_cmd(t_server *server, int sc, char *name, char *msg)
 {
 	t_fd	*client_dst;
 
@@ -28,11 +28,11 @@ void	check_msg_cmd(t_server *server, int sc, char *name, char *msg)
 	else
 	{
 		msg = get_formated_private_msg(server, sc, msg);
-		send_to_one_client(server, client_dst->id, msg);
+		action_send_to_one_client(server, client_dst->id, msg);
 	}
 }
 
-void	cmd_msg(t_server *server, int sc, char *cmd)
+void			cmd_msg(t_server *server, int sc, char *cmd)
 {
 	char 	*name;
 	char 	*msg;

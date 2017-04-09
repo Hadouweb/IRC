@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BIRCD
-
-# Build rule for target.
-BIRCD: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BIRCD
-.PHONY : BIRCD
-
-# fast build rule for target.
-BIRCD/fast:
-	$(MAKE) -f CMakeFiles/BIRCD.dir/build.make CMakeFiles/BIRCD.dir/build
-.PHONY : BIRCD/fast
-
-#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -137,19 +124,6 @@ server/fast:
 .PHONY : server/fast
 
 #=============================================================================
-# Target rules for targets named client
-
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-.PHONY : client/fast
-
-#=============================================================================
 # Target rules for targets named ft
 
 # Build rule for target.
@@ -161,60 +135,6 @@ ft: cmake_check_build_system
 ft/fast:
 	$(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/build
 .PHONY : ft/fast
-
-bircd/main.o: bircd/main.c.o
-
-.PHONY : bircd/main.o
-
-# target to build an object file
-bircd/main.c.o:
-	$(MAKE) -f CMakeFiles/BIRCD.dir/build.make CMakeFiles/BIRCD.dir/bircd/main.c.o
-.PHONY : bircd/main.c.o
-
-bircd/main.i: bircd/main.c.i
-
-.PHONY : bircd/main.i
-
-# target to preprocess a source file
-bircd/main.c.i:
-	$(MAKE) -f CMakeFiles/BIRCD.dir/build.make CMakeFiles/BIRCD.dir/bircd/main.c.i
-.PHONY : bircd/main.c.i
-
-bircd/main.s: bircd/main.c.s
-
-.PHONY : bircd/main.s
-
-# target to generate assembly for a file
-bircd/main.c.s:
-	$(MAKE) -f CMakeFiles/BIRCD.dir/build.make CMakeFiles/BIRCD.dir/bircd/main.c.s
-.PHONY : bircd/main.c.s
-
-client_src/srcs/main.o: client_src/srcs/main.c.o
-
-.PHONY : client_src/srcs/main.o
-
-# target to build an object file
-client_src/srcs/main.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.o
-.PHONY : client_src/srcs/main.c.o
-
-client_src/srcs/main.i: client_src/srcs/main.c.i
-
-.PHONY : client_src/srcs/main.i
-
-# target to preprocess a source file
-client_src/srcs/main.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.i
-.PHONY : client_src/srcs/main.c.i
-
-client_src/srcs/main.s: client_src/srcs/main.c.s
-
-.PHONY : client_src/srcs/main.s
-
-# target to generate assembly for a file
-client_src/srcs/main.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.s
-.PHONY : client_src/srcs/main.c.s
 
 server_src/srcs/cmd.o: server_src/srcs/cmd.c.o
 
@@ -378,33 +298,6 @@ server_src/srcs/cmd_who.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_who.c.s
 .PHONY : server_src/srcs/cmd_who.c.s
 
-server_src/srcs/config.o: server_src/srcs/config.c.o
-
-.PHONY : server_src/srcs/config.o
-
-# target to build an object file
-server_src/srcs/config.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/config.c.o
-.PHONY : server_src/srcs/config.c.o
-
-server_src/srcs/config.i: server_src/srcs/config.c.i
-
-.PHONY : server_src/srcs/config.i
-
-# target to preprocess a source file
-server_src/srcs/config.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/config.c.i
-.PHONY : server_src/srcs/config.c.i
-
-server_src/srcs/config.s: server_src/srcs/config.c.s
-
-.PHONY : server_src/srcs/config.s
-
-# target to generate assembly for a file
-server_src/srcs/config.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/config.c.s
-.PHONY : server_src/srcs/config.c.s
-
 server_src/srcs/debug.o: server_src/srcs/debug.c.o
 
 .PHONY : server_src/srcs/debug.o
@@ -458,60 +351,6 @@ server_src/srcs/error.s: server_src/srcs/error.c.s
 server_src/srcs/error.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/error.c.s
 .PHONY : server_src/srcs/error.c.s
-
-server_src/srcs/event.o: server_src/srcs/event.c.o
-
-.PHONY : server_src/srcs/event.o
-
-# target to build an object file
-server_src/srcs/event.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event.c.o
-.PHONY : server_src/srcs/event.c.o
-
-server_src/srcs/event.i: server_src/srcs/event.c.i
-
-.PHONY : server_src/srcs/event.i
-
-# target to preprocess a source file
-server_src/srcs/event.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event.c.i
-.PHONY : server_src/srcs/event.c.i
-
-server_src/srcs/event.s: server_src/srcs/event.c.s
-
-.PHONY : server_src/srcs/event.s
-
-# target to generate assembly for a file
-server_src/srcs/event.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event.c.s
-.PHONY : server_src/srcs/event.c.s
-
-server_src/srcs/event_client.o: server_src/srcs/event_client.c.o
-
-.PHONY : server_src/srcs/event_client.o
-
-# target to build an object file
-server_src/srcs/event_client.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event_client.c.o
-.PHONY : server_src/srcs/event_client.c.o
-
-server_src/srcs/event_client.i: server_src/srcs/event_client.c.i
-
-.PHONY : server_src/srcs/event_client.i
-
-# target to preprocess a source file
-server_src/srcs/event_client.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event_client.c.i
-.PHONY : server_src/srcs/event_client.c.i
-
-server_src/srcs/event_client.s: server_src/srcs/event_client.c.s
-
-.PHONY : server_src/srcs/event_client.s
-
-# target to generate assembly for a file
-server_src/srcs/event_client.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event_client.c.s
-.PHONY : server_src/srcs/event_client.c.s
 
 server_src/srcs/event_server.o: server_src/srcs/event_server.c.o
 
@@ -567,6 +406,60 @@ server_src/srcs/main.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/main.c.s
 .PHONY : server_src/srcs/main.c.s
 
+server_src/srcs/main_loop.o: server_src/srcs/main_loop.c.o
+
+.PHONY : server_src/srcs/main_loop.o
+
+# target to build an object file
+server_src/srcs/main_loop.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/main_loop.c.o
+.PHONY : server_src/srcs/main_loop.c.o
+
+server_src/srcs/main_loop.i: server_src/srcs/main_loop.c.i
+
+.PHONY : server_src/srcs/main_loop.i
+
+# target to preprocess a source file
+server_src/srcs/main_loop.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/main_loop.c.i
+.PHONY : server_src/srcs/main_loop.c.i
+
+server_src/srcs/main_loop.s: server_src/srcs/main_loop.c.s
+
+.PHONY : server_src/srcs/main_loop.s
+
+# target to generate assembly for a file
+server_src/srcs/main_loop.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/main_loop.c.s
+.PHONY : server_src/srcs/main_loop.c.s
+
+server_src/srcs/print_log_bonus.o: server_src/srcs/print_log_bonus.c.o
+
+.PHONY : server_src/srcs/print_log_bonus.o
+
+# target to build an object file
+server_src/srcs/print_log_bonus.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o
+.PHONY : server_src/srcs/print_log_bonus.c.o
+
+server_src/srcs/print_log_bonus.i: server_src/srcs/print_log_bonus.c.i
+
+.PHONY : server_src/srcs/print_log_bonus.i
+
+# target to preprocess a source file
+server_src/srcs/print_log_bonus.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.i
+.PHONY : server_src/srcs/print_log_bonus.c.i
+
+server_src/srcs/print_log_bonus.s: server_src/srcs/print_log_bonus.c.s
+
+.PHONY : server_src/srcs/print_log_bonus.s
+
+# target to generate assembly for a file
+server_src/srcs/print_log_bonus.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.s
+.PHONY : server_src/srcs/print_log_bonus.c.s
+
 server_src/srcs/ring_buffer.o: server_src/srcs/ring_buffer.c.o
 
 .PHONY : server_src/srcs/ring_buffer.o
@@ -594,32 +487,86 @@ server_src/srcs/ring_buffer.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.s
 .PHONY : server_src/srcs/ring_buffer.c.s
 
-server_src/srcs/send.o: server_src/srcs/send.c.o
+server_src/srcs/set_action.o: server_src/srcs/set_action.c.o
 
-.PHONY : server_src/srcs/send.o
+.PHONY : server_src/srcs/set_action.o
 
 # target to build an object file
-server_src/srcs/send.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/send.c.o
-.PHONY : server_src/srcs/send.c.o
+server_src/srcs/set_action.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_action.c.o
+.PHONY : server_src/srcs/set_action.c.o
 
-server_src/srcs/send.i: server_src/srcs/send.c.i
+server_src/srcs/set_action.i: server_src/srcs/set_action.c.i
 
-.PHONY : server_src/srcs/send.i
+.PHONY : server_src/srcs/set_action.i
 
 # target to preprocess a source file
-server_src/srcs/send.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/send.c.i
-.PHONY : server_src/srcs/send.c.i
+server_src/srcs/set_action.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_action.c.i
+.PHONY : server_src/srcs/set_action.c.i
 
-server_src/srcs/send.s: server_src/srcs/send.c.s
+server_src/srcs/set_action.s: server_src/srcs/set_action.c.s
 
-.PHONY : server_src/srcs/send.s
+.PHONY : server_src/srcs/set_action.s
 
 # target to generate assembly for a file
-server_src/srcs/send.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/send.c.s
-.PHONY : server_src/srcs/send.c.s
+server_src/srcs/set_action.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_action.c.s
+.PHONY : server_src/srcs/set_action.c.s
+
+server_src/srcs/set_client.o: server_src/srcs/set_client.c.o
+
+.PHONY : server_src/srcs/set_client.o
+
+# target to build an object file
+server_src/srcs/set_client.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_client.c.o
+.PHONY : server_src/srcs/set_client.c.o
+
+server_src/srcs/set_client.i: server_src/srcs/set_client.c.i
+
+.PHONY : server_src/srcs/set_client.i
+
+# target to preprocess a source file
+server_src/srcs/set_client.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_client.c.i
+.PHONY : server_src/srcs/set_client.c.i
+
+server_src/srcs/set_client.s: server_src/srcs/set_client.c.s
+
+.PHONY : server_src/srcs/set_client.s
+
+# target to generate assembly for a file
+server_src/srcs/set_client.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_client.c.s
+.PHONY : server_src/srcs/set_client.c.s
+
+server_src/srcs/set_server.o: server_src/srcs/set_server.c.o
+
+.PHONY : server_src/srcs/set_server.o
+
+# target to build an object file
+server_src/srcs/set_server.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_server.c.o
+.PHONY : server_src/srcs/set_server.c.o
+
+server_src/srcs/set_server.i: server_src/srcs/set_server.c.i
+
+.PHONY : server_src/srcs/set_server.i
+
+# target to preprocess a source file
+server_src/srcs/set_server.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_server.c.i
+.PHONY : server_src/srcs/set_server.c.i
+
+server_src/srcs/set_server.s: server_src/srcs/set_server.c.s
+
+.PHONY : server_src/srcs/set_server.s
+
+# target to generate assembly for a file
+server_src/srcs/set_server.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/set_server.c.s
+.PHONY : server_src/srcs/set_server.c.s
 
 server_src/srcs/util.o: server_src/srcs/util.c.o
 
@@ -656,16 +603,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... BIRCD"
 	@echo "... server"
-	@echo "... client"
 	@echo "... ft"
-	@echo "... bircd/main.o"
-	@echo "... bircd/main.i"
-	@echo "... bircd/main.s"
-	@echo "... client_src/srcs/main.o"
-	@echo "... client_src/srcs/main.i"
-	@echo "... client_src/srcs/main.s"
 	@echo "... server_src/srcs/cmd.o"
 	@echo "... server_src/srcs/cmd.i"
 	@echo "... server_src/srcs/cmd.s"
@@ -684,33 +623,36 @@ help:
 	@echo "... server_src/srcs/cmd_who.o"
 	@echo "... server_src/srcs/cmd_who.i"
 	@echo "... server_src/srcs/cmd_who.s"
-	@echo "... server_src/srcs/config.o"
-	@echo "... server_src/srcs/config.i"
-	@echo "... server_src/srcs/config.s"
 	@echo "... server_src/srcs/debug.o"
 	@echo "... server_src/srcs/debug.i"
 	@echo "... server_src/srcs/debug.s"
 	@echo "... server_src/srcs/error.o"
 	@echo "... server_src/srcs/error.i"
 	@echo "... server_src/srcs/error.s"
-	@echo "... server_src/srcs/event.o"
-	@echo "... server_src/srcs/event.i"
-	@echo "... server_src/srcs/event.s"
-	@echo "... server_src/srcs/event_client.o"
-	@echo "... server_src/srcs/event_client.i"
-	@echo "... server_src/srcs/event_client.s"
 	@echo "... server_src/srcs/event_server.o"
 	@echo "... server_src/srcs/event_server.i"
 	@echo "... server_src/srcs/event_server.s"
 	@echo "... server_src/srcs/main.o"
 	@echo "... server_src/srcs/main.i"
 	@echo "... server_src/srcs/main.s"
+	@echo "... server_src/srcs/main_loop.o"
+	@echo "... server_src/srcs/main_loop.i"
+	@echo "... server_src/srcs/main_loop.s"
+	@echo "... server_src/srcs/print_log_bonus.o"
+	@echo "... server_src/srcs/print_log_bonus.i"
+	@echo "... server_src/srcs/print_log_bonus.s"
 	@echo "... server_src/srcs/ring_buffer.o"
 	@echo "... server_src/srcs/ring_buffer.i"
 	@echo "... server_src/srcs/ring_buffer.s"
-	@echo "... server_src/srcs/send.o"
-	@echo "... server_src/srcs/send.i"
-	@echo "... server_src/srcs/send.s"
+	@echo "... server_src/srcs/set_action.o"
+	@echo "... server_src/srcs/set_action.i"
+	@echo "... server_src/srcs/set_action.s"
+	@echo "... server_src/srcs/set_client.o"
+	@echo "... server_src/srcs/set_client.i"
+	@echo "... server_src/srcs/set_client.s"
+	@echo "... server_src/srcs/set_server.o"
+	@echo "... server_src/srcs/set_server.i"
+	@echo "... server_src/srcs/set_server.s"
 	@echo "... server_src/srcs/util.o"
 	@echo "... server_src/srcs/util.i"
 	@echo "... server_src/srcs/util.s"

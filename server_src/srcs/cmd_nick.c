@@ -1,6 +1,6 @@
 #include "server.h"
 
-int		check_duplicate_name(t_server *server, int sc, char *name)
+static int		check_duplicate_name(t_server *server, int sc, char *name)
 {
 	int 	i;
 
@@ -18,7 +18,7 @@ int		check_duplicate_name(t_server *server, int sc, char *name)
 	return (0);
 }
 
-void	cmd_nick(t_server *server, int sc, char *cmd)
+void			cmd_nick(t_server *server, int sc, char *cmd)
 {
 	char 	*name;
 	int 	i;

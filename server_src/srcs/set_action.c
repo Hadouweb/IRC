@@ -1,6 +1,6 @@
 #include "server.h"
 
-void		event_send_all(t_server *server, int sc, char *msg)
+void		action_send_all(t_server *server, int sc, char *msg)
 {
 	int			i;
 	t_channel	*chan;
@@ -13,27 +13,22 @@ void		event_send_all(t_server *server, int sc, char *msg)
 	{
 		client = &server->fd_array[i];
 		if (chan->client_connected[i] && client->type == CLIENT && i != sc)
-		{
-			send(i, msg, ft_strlen(msg), 0);
-		}
+			ft_strcpy(server->fd_array[i].buf_write.buff, msg);
 		i++;
 	}
 }
 
-void 		send_to_one_client(t_server *server, int sc, char *msg)
+void 		action_send_to_one_client(t_server *server, int sc, char *msg)
 {
-	if (server)
-		;
-	send(sc, msg, ft_strlen(msg), 0);
+	ft_strcpy(server->fd_array[sc].buf_write.buff, msg);
 }
 
-void		event_send_error(t_server *server, int sc, char *error, char *error2)
+void		action_send_error(t_server *server, int sc, char *error, char *error2)
 {
-	if (server)
-		;
+	(void)server;
 	error = ft_strjoin("\033[31;1m", error);
 	if (error2 != NULL)
 		error = ft_strjoin_free(error, error2, 1);
 	error = ft_strjoin_free(error, "\033[0m", 1);
-	send(sc, error, ft_strlen(error), 0);
+	ft_strcpy(server->fd_array[sc].buf_write.buff, error);
 }
