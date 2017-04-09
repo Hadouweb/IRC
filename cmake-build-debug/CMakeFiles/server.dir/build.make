@@ -201,28 +201,28 @@ CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.provides: CMakeFiles/server.
 CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o
 
 
-CMakeFiles/server.dir/server_src/srcs/event_server.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server_src/srcs/event_server.c.o: ../server_src/srcs/event_server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/server.dir/server_src/srcs/event_server.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/event_server.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/event_server.c
+CMakeFiles/server.dir/server_src/srcs/event.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server_src/srcs/event.c.o: ../server_src/srcs/event.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/server.dir/server_src/srcs/event.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server_src/srcs/event.c.o   -c /Users/nle-bret/project/IRC/server_src/srcs/event.c
 
-CMakeFiles/server.dir/server_src/srcs/event_server.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/event_server.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/event_server.c > CMakeFiles/server.dir/server_src/srcs/event_server.c.i
+CMakeFiles/server.dir/server_src/srcs/event.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server_src/srcs/event.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/server_src/srcs/event.c > CMakeFiles/server.dir/server_src/srcs/event.c.i
 
-CMakeFiles/server.dir/server_src/srcs/event_server.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/event_server.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/event_server.c -o CMakeFiles/server.dir/server_src/srcs/event_server.c.s
+CMakeFiles/server.dir/server_src/srcs/event.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server_src/srcs/event.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/server_src/srcs/event.c -o CMakeFiles/server.dir/server_src/srcs/event.c.s
 
-CMakeFiles/server.dir/server_src/srcs/event_server.c.o.requires:
+CMakeFiles/server.dir/server_src/srcs/event.c.o.requires:
 
-.PHONY : CMakeFiles/server.dir/server_src/srcs/event_server.c.o.requires
+.PHONY : CMakeFiles/server.dir/server_src/srcs/event.c.o.requires
 
-CMakeFiles/server.dir/server_src/srcs/event_server.c.o.provides: CMakeFiles/server.dir/server_src/srcs/event_server.c.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event_server.c.o.provides.build
-.PHONY : CMakeFiles/server.dir/server_src/srcs/event_server.c.o.provides
+CMakeFiles/server.dir/server_src/srcs/event.c.o.provides: CMakeFiles/server.dir/server_src/srcs/event.c.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/event.c.o.provides.build
+.PHONY : CMakeFiles/server.dir/server_src/srcs/event.c.o.provides
 
-CMakeFiles/server.dir/server_src/srcs/event_server.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/event_server.c.o
+CMakeFiles/server.dir/server_src/srcs/event.c.o.provides.build: CMakeFiles/server.dir/server_src/srcs/event.c.o
 
 
 CMakeFiles/server.dir/server_src/srcs/set_action.c.o: CMakeFiles/server.dir/flags.make
@@ -473,7 +473,7 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/server_src/srcs/set_server.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/set_client.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/main_loop.c.o" \
-"CMakeFiles/server.dir/server_src/srcs/event_server.c.o" \
+"CMakeFiles/server.dir/server_src/srcs/event.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/set_action.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/cmd.c.o" \
 "CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o" \
@@ -494,7 +494,7 @@ server: CMakeFiles/server.dir/server_src/srcs/util.c.o
 server: CMakeFiles/server.dir/server_src/srcs/set_server.c.o
 server: CMakeFiles/server.dir/server_src/srcs/set_client.c.o
 server: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o
-server: CMakeFiles/server.dir/server_src/srcs/event_server.c.o
+server: CMakeFiles/server.dir/server_src/srcs/event.c.o
 server: CMakeFiles/server.dir/server_src/srcs/set_action.c.o
 server: CMakeFiles/server.dir/server_src/srcs/cmd.c.o
 server: CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o
@@ -522,7 +522,7 @@ CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/util.c.o.r
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/set_server.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/set_client.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/main_loop.c.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/event_server.c.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/event.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/set_action.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd.c.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o.requires

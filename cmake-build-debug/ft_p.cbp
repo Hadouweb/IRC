@@ -432,7 +432,7 @@
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/error.c">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/event_server.c">
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/event.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/main.c">

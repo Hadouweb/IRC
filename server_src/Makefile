@@ -17,7 +17,7 @@ SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/set_server.c\
         $(SRCS_PATH)/set_client.c\
         $(SRCS_PATH)/main_loop.c\
-        $(SRCS_PATH)/event_server.c\
+        $(SRCS_PATH)/event.c\
         $(SRCS_PATH)/set_action.c\
         $(SRCS_PATH)/cmd.c\
         $(SRCS_PATH)/cmd_nick.c\

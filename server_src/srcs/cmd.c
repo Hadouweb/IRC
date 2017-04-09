@@ -13,5 +13,5 @@ void 	cmd(t_server *server, int sc, char *cmd)
 	else if (ft_strncmp(cmd, "/msg ", 5) == 0)
 		cmd_msg(server, sc, cmd);
 	else
-		send_error(server, sc, "Error unknown cmd: ", cmd);
+		send_error(server, sc, "unknown cmd: ", cmd);
 }

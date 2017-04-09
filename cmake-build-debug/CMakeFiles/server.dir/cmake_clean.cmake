@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/server_src/srcs/set_server.c.o"
   "CMakeFiles/server.dir/server_src/srcs/set_client.c.o"
   "CMakeFiles/server.dir/server_src/srcs/main_loop.c.o"
-  "CMakeFiles/server.dir/server_src/srcs/event_server.c.o"
+  "CMakeFiles/server.dir/server_src/srcs/event.c.o"
   "CMakeFiles/server.dir/server_src/srcs/set_action.c.o"
   "CMakeFiles/server.dir/server_src/srcs/cmd.c.o"
   "CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o"

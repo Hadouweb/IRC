@@ -12,7 +12,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd_who.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_who.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/debug.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/debug.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/error.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/error.c.o"
-  "/Users/nle-bret/project/IRC/server_src/srcs/event_server.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/event_server.c.o"
+  "/Users/nle-bret/project/IRC/server_src/srcs/event.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/event.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/main.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/main.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/main_loop.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/main_loop.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o"

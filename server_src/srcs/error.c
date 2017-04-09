@@ -23,5 +23,5 @@ void	print_error_exit(char *str, char *file, int line)
 void	send_error(t_server *server, int sc, char *error, char *error2)
 {
 	action_send_error(server, sc, error, error2);
-	server_print_log(server, sc, error, error2);
+	print_log_error(server, sc, error, error2);
 }

@@ -18,6 +18,12 @@ enum	e_socket_type
 	CLIENT,
 };
 
+# define COLOR_NICK_NAME "\033[33;1m"
+# define COLOR_SUCCESS "\033[32;1m"
+# define COLOR_ERROR "\033[31;1m"
+
+# define COLOR_END "\033[0m"
+
 # define BUF_SIZE	512
 # define NICKNAME_SIZE 9
 # define CHANNEL_SIZE 200
@@ -87,15 +93,17 @@ void					print_usage(char *prog_name);
 void					print_error_exit(char *str, char *file, int line);
 void					send_error(t_server *server, int sc, char *error, char *error2);
 
-void					event_server_write(t_server *server, int sc);
-void					event_server_read(t_server *server, int sc);
-void					event_server_accept(t_server *server, int ss);
+void					event_write(t_server *server, int sc);
+void					event_read(t_server *server, int sc);
+void					event_accept(t_server *server, int ss);
 
 void					set_socket(t_server *server);
 void					main_loop(t_server *server);
 void					is_set_socket(t_server *server);
 
-void					server_print_log(t_server *server, int sc, char *str, char *str2);
+void					print_log_error(t_server *server, int sc, char *str,
+										char *str2);
+void					print_log_new_client(t_server *server, int sc, struct sockaddr_in *sock_in);
 
 void					ring_buffer_read(t_server *server, int sc, char *str);
 

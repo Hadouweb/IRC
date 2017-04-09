@@ -22,7 +22,7 @@ set(SRCS_SERVER
         server_src/srcs/set_server.c
         server_src/srcs/set_client.c
         server_src/srcs/main_loop.c
-        server_src/srcs/event_server.c
+        server_src/srcs/event.c
         server_src/srcs/set_action.c
         server_src/srcs/cmd.c
         server_src/srcs/cmd_nick.c

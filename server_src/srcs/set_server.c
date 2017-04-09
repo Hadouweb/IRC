@@ -20,7 +20,7 @@ static void		set_server_socket(t_server *server)
 	if (listen(socket_server, 42) == -1)
 		print_error_exit("listen", __FILE__, __LINE__);
 	server->fd_array[socket_server].type = SERVER;
-	server->fd_array[socket_server].ft_read = event_server_accept;
+	server->fd_array[socket_server].ft_read = event_accept;
 }
 
 void			init_server(t_server *server, uint16_t port)
