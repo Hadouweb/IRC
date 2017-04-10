@@ -11,7 +11,9 @@ HEADER = -I $(LIBFT_PATH)/includes -I $(INC_PATH)
 LIB = -L$(LIBFT_PATH) -lft
 LIBNAME = $(LIBFT_PATH)/libft.a
 
-SRC = $(SRCS_PATH)/main.c\
+SRC =   $(SRCS_PATH)/main.c\
+        $(SRCS_PATH)/error.c\
+        $(SRCS_PATH)/set_client.c\
 
 OBJ = $(SRC:.c=.o)
 

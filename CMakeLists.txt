@@ -12,6 +12,8 @@ include_directories(server_src/includes)
 
 set(SRCS_CLIENT
         client_src/srcs/main.c
+        client_src/srcs/error.c
+        client_src/srcs/set_client.c
     )
 set(HEADER_CLIENT client_src/includes/client.h)
 
@@ -40,7 +42,7 @@ set(HEADER_SERVER server_src/includes/server.h)
 #set(SRC_BIRCD
 #    bircd/bircd.h)
 
-#add_executable(client ${SRCS_CLIENT} ${HEADER_CLIENT})
+add_executable(client ${SRCS_CLIENT} ${HEADER_CLIENT})
 add_executable(server ${SRCS_SERVER} ${HEADER_SERVER})
 #add_executable(BIRCD ${SRC_BIRCD})
 

@@ -81,18 +81,69 @@ CMakeFiles/client.dir/client_src/srcs/main.c.o.provides: CMakeFiles/client.dir/c
 CMakeFiles/client.dir/client_src/srcs/main.c.o.provides.build: CMakeFiles/client.dir/client_src/srcs/main.c.o
 
 
+CMakeFiles/client.dir/client_src/srcs/error.c.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client_src/srcs/error.c.o: ../client_src/srcs/error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/client.dir/client_src/srcs/error.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/client_src/srcs/error.c.o   -c /Users/nle-bret/project/IRC/client_src/srcs/error.c
+
+CMakeFiles/client.dir/client_src/srcs/error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client.dir/client_src/srcs/error.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/client_src/srcs/error.c > CMakeFiles/client.dir/client_src/srcs/error.c.i
+
+CMakeFiles/client.dir/client_src/srcs/error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client.dir/client_src/srcs/error.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/client_src/srcs/error.c -o CMakeFiles/client.dir/client_src/srcs/error.c.s
+
+CMakeFiles/client.dir/client_src/srcs/error.c.o.requires:
+
+.PHONY : CMakeFiles/client.dir/client_src/srcs/error.c.o.requires
+
+CMakeFiles/client.dir/client_src/srcs/error.c.o.provides: CMakeFiles/client.dir/client_src/srcs/error.c.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/error.c.o.provides.build
+.PHONY : CMakeFiles/client.dir/client_src/srcs/error.c.o.provides
+
+CMakeFiles/client.dir/client_src/srcs/error.c.o.provides.build: CMakeFiles/client.dir/client_src/srcs/error.c.o
+
+
+CMakeFiles/client.dir/client_src/srcs/set_client.c.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client_src/srcs/set_client.c.o: ../client_src/srcs/set_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/client.dir/client_src/srcs/set_client.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/client.dir/client_src/srcs/set_client.c.o   -c /Users/nle-bret/project/IRC/client_src/srcs/set_client.c
+
+CMakeFiles/client.dir/client_src/srcs/set_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client.dir/client_src/srcs/set_client.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nle-bret/project/IRC/client_src/srcs/set_client.c > CMakeFiles/client.dir/client_src/srcs/set_client.c.i
+
+CMakeFiles/client.dir/client_src/srcs/set_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client.dir/client_src/srcs/set_client.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nle-bret/project/IRC/client_src/srcs/set_client.c -o CMakeFiles/client.dir/client_src/srcs/set_client.c.s
+
+CMakeFiles/client.dir/client_src/srcs/set_client.c.o.requires:
+
+.PHONY : CMakeFiles/client.dir/client_src/srcs/set_client.c.o.requires
+
+CMakeFiles/client.dir/client_src/srcs/set_client.c.o.provides: CMakeFiles/client.dir/client_src/srcs/set_client.c.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/set_client.c.o.provides.build
+.PHONY : CMakeFiles/client.dir/client_src/srcs/set_client.c.o.provides
+
+CMakeFiles/client.dir/client_src/srcs/set_client.c.o.provides.build: CMakeFiles/client.dir/client_src/srcs/set_client.c.o
+
+
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client_src/srcs/main.c.o"
+"CMakeFiles/client.dir/client_src/srcs/main.c.o" \
+"CMakeFiles/client.dir/client_src/srcs/error.c.o" \
+"CMakeFiles/client.dir/client_src/srcs/set_client.c.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 client: CMakeFiles/client.dir/client_src/srcs/main.c.o
+client: CMakeFiles/client.dir/client_src/srcs/error.c.o
+client: CMakeFiles/client.dir/client_src/srcs/set_client.c.o
 client: CMakeFiles/client.dir/build.make
-client: libft/libft.a
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +152,8 @@ CMakeFiles/client.dir/build: client
 .PHONY : CMakeFiles/client.dir/build
 
 CMakeFiles/client.dir/requires: CMakeFiles/client.dir/client_src/srcs/main.c.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/client_src/srcs/error.c.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/client_src/srcs/set_client.c.o.requires
 
 .PHONY : CMakeFiles/client.dir/requires
 

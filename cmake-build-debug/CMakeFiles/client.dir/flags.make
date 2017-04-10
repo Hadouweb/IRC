@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/nle-bret/project/IRC/libft/includes -I/Users/nle-bret/project/IRC/client_src -I/Users/nle-bret/project/IRC/client_src/includes -I/Users/nle-bret/project/IRC/server_src -I/Users/nle-bret/project/IRC/server_src/includes -I/Users/nle-bret/project/IRC/libft/./includes 
+C_INCLUDES = -I/Users/nle-bret/project/IRC/libft/includes -I/Users/nle-bret/project/IRC/client_src -I/Users/nle-bret/project/IRC/client_src/includes -I/Users/nle-bret/project/IRC/server_src -I/Users/nle-bret/project/IRC/server_src/includes 
 

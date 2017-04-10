@@ -1,6 +1,7 @@
 /Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir
+/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir
 /Users/nle-bret/project/IRC/cmake-build-debug/libft/CMakeFiles/edit_cache.dir
 /Users/nle-bret/project/IRC/cmake-build-debug/libft/CMakeFiles/rebuild_cache.dir
 /Users/nle-bret/project/IRC/cmake-build-debug/libft/CMakeFiles/ft.dir

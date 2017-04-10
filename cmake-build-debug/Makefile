@@ -124,6 +124,19 @@ server/fast:
 .PHONY : server/fast
 
 #=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
+
+#=============================================================================
 # Target rules for targets named ft
 
 # Build rule for target.
@@ -135,6 +148,87 @@ ft: cmake_check_build_system
 ft/fast:
 	$(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/build
 .PHONY : ft/fast
+
+client_src/srcs/error.o: client_src/srcs/error.c.o
+
+.PHONY : client_src/srcs/error.o
+
+# target to build an object file
+client_src/srcs/error.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/error.c.o
+.PHONY : client_src/srcs/error.c.o
+
+client_src/srcs/error.i: client_src/srcs/error.c.i
+
+.PHONY : client_src/srcs/error.i
+
+# target to preprocess a source file
+client_src/srcs/error.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/error.c.i
+.PHONY : client_src/srcs/error.c.i
+
+client_src/srcs/error.s: client_src/srcs/error.c.s
+
+.PHONY : client_src/srcs/error.s
+
+# target to generate assembly for a file
+client_src/srcs/error.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/error.c.s
+.PHONY : client_src/srcs/error.c.s
+
+client_src/srcs/main.o: client_src/srcs/main.c.o
+
+.PHONY : client_src/srcs/main.o
+
+# target to build an object file
+client_src/srcs/main.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.o
+.PHONY : client_src/srcs/main.c.o
+
+client_src/srcs/main.i: client_src/srcs/main.c.i
+
+.PHONY : client_src/srcs/main.i
+
+# target to preprocess a source file
+client_src/srcs/main.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.i
+.PHONY : client_src/srcs/main.c.i
+
+client_src/srcs/main.s: client_src/srcs/main.c.s
+
+.PHONY : client_src/srcs/main.s
+
+# target to generate assembly for a file
+client_src/srcs/main.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.s
+.PHONY : client_src/srcs/main.c.s
+
+client_src/srcs/set_client.o: client_src/srcs/set_client.c.o
+
+.PHONY : client_src/srcs/set_client.o
+
+# target to build an object file
+client_src/srcs/set_client.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/set_client.c.o
+.PHONY : client_src/srcs/set_client.c.o
+
+client_src/srcs/set_client.i: client_src/srcs/set_client.c.i
+
+.PHONY : client_src/srcs/set_client.i
+
+# target to preprocess a source file
+client_src/srcs/set_client.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/set_client.c.i
+.PHONY : client_src/srcs/set_client.c.i
+
+client_src/srcs/set_client.s: client_src/srcs/set_client.c.s
+
+.PHONY : client_src/srcs/set_client.s
+
+# target to generate assembly for a file
+client_src/srcs/set_client.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/set_client.c.s
+.PHONY : client_src/srcs/set_client.c.s
 
 server_src/srcs/cmd.o: server_src/srcs/cmd.c.o
 
@@ -604,7 +698,17 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server"
+	@echo "... client"
 	@echo "... ft"
+	@echo "... client_src/srcs/error.o"
+	@echo "... client_src/srcs/error.i"
+	@echo "... client_src/srcs/error.s"
+	@echo "... client_src/srcs/main.o"
+	@echo "... client_src/srcs/main.i"
+	@echo "... client_src/srcs/main.s"
+	@echo "... client_src/srcs/set_client.o"
+	@echo "... client_src/srcs/set_client.i"
+	@echo "... client_src/srcs/set_client.s"
 	@echo "... server_src/srcs/cmd.o"
 	@echo "... server_src/srcs/cmd.i"
 	@echo "... server_src/srcs/cmd.s"

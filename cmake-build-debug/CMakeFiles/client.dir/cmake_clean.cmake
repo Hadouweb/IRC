@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client.dir/client_src/srcs/main.c.o"
+  "CMakeFiles/client.dir/client_src/srcs/error.c.o"
+  "CMakeFiles/client.dir/client_src/srcs/set_client.c.o"
   "client.pdb"
   "client"
 )
