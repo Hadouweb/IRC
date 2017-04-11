@@ -20,3 +20,12 @@ void	print_error_exit(char *str, char *file, int line)
 	ft_putchar('\n');
 	exit(1);
 }
+
+void	print_error(char *error, char *error2)
+{
+	error = ft_strjoin("\033[31;1m", error);
+	if (error2 != NULL)
+		error = ft_strjoin_free(error, error2, 1);
+	error = ft_strjoin_free(error, "\033[0m\n", 1);
+	ft_putstr(error);
+}

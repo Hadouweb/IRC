@@ -149,6 +149,33 @@ ft/fast:
 	$(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/build
 .PHONY : ft/fast
 
+client_src/srcs/cmd.o: client_src/srcs/cmd.c.o
+
+.PHONY : client_src/srcs/cmd.o
+
+# target to build an object file
+client_src/srcs/cmd.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/cmd.c.o
+.PHONY : client_src/srcs/cmd.c.o
+
+client_src/srcs/cmd.i: client_src/srcs/cmd.c.i
+
+.PHONY : client_src/srcs/cmd.i
+
+# target to preprocess a source file
+client_src/srcs/cmd.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/cmd.c.i
+.PHONY : client_src/srcs/cmd.c.i
+
+client_src/srcs/cmd.s: client_src/srcs/cmd.c.s
+
+.PHONY : client_src/srcs/cmd.s
+
+# target to generate assembly for a file
+client_src/srcs/cmd.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/cmd.c.s
+.PHONY : client_src/srcs/cmd.c.s
+
 client_src/srcs/error.o: client_src/srcs/error.c.o
 
 .PHONY : client_src/srcs/error.o
@@ -176,6 +203,33 @@ client_src/srcs/error.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/error.c.s
 .PHONY : client_src/srcs/error.c.s
 
+client_src/srcs/event.o: client_src/srcs/event.c.o
+
+.PHONY : client_src/srcs/event.o
+
+# target to build an object file
+client_src/srcs/event.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/event.c.o
+.PHONY : client_src/srcs/event.c.o
+
+client_src/srcs/event.i: client_src/srcs/event.c.i
+
+.PHONY : client_src/srcs/event.i
+
+# target to preprocess a source file
+client_src/srcs/event.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/event.c.i
+.PHONY : client_src/srcs/event.c.i
+
+client_src/srcs/event.s: client_src/srcs/event.c.s
+
+.PHONY : client_src/srcs/event.s
+
+# target to generate assembly for a file
+client_src/srcs/event.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/event.c.s
+.PHONY : client_src/srcs/event.c.s
+
 client_src/srcs/main.o: client_src/srcs/main.c.o
 
 .PHONY : client_src/srcs/main.o
@@ -202,6 +256,60 @@ client_src/srcs/main.s: client_src/srcs/main.c.s
 client_src/srcs/main.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main.c.s
 .PHONY : client_src/srcs/main.c.s
+
+client_src/srcs/main_loop.o: client_src/srcs/main_loop.c.o
+
+.PHONY : client_src/srcs/main_loop.o
+
+# target to build an object file
+client_src/srcs/main_loop.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main_loop.c.o
+.PHONY : client_src/srcs/main_loop.c.o
+
+client_src/srcs/main_loop.i: client_src/srcs/main_loop.c.i
+
+.PHONY : client_src/srcs/main_loop.i
+
+# target to preprocess a source file
+client_src/srcs/main_loop.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main_loop.c.i
+.PHONY : client_src/srcs/main_loop.c.i
+
+client_src/srcs/main_loop.s: client_src/srcs/main_loop.c.s
+
+.PHONY : client_src/srcs/main_loop.s
+
+# target to generate assembly for a file
+client_src/srcs/main_loop.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main_loop.c.s
+.PHONY : client_src/srcs/main_loop.c.s
+
+client_src/srcs/ring_buffer.o: client_src/srcs/ring_buffer.c.o
+
+.PHONY : client_src/srcs/ring_buffer.o
+
+# target to build an object file
+client_src/srcs/ring_buffer.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/ring_buffer.c.o
+.PHONY : client_src/srcs/ring_buffer.c.o
+
+client_src/srcs/ring_buffer.i: client_src/srcs/ring_buffer.c.i
+
+.PHONY : client_src/srcs/ring_buffer.i
+
+# target to preprocess a source file
+client_src/srcs/ring_buffer.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/ring_buffer.c.i
+.PHONY : client_src/srcs/ring_buffer.c.i
+
+client_src/srcs/ring_buffer.s: client_src/srcs/ring_buffer.c.s
+
+.PHONY : client_src/srcs/ring_buffer.s
+
+# target to generate assembly for a file
+client_src/srcs/ring_buffer.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/ring_buffer.c.s
+.PHONY : client_src/srcs/ring_buffer.c.s
 
 client_src/srcs/set_client.o: client_src/srcs/set_client.c.o
 
@@ -700,12 +808,24 @@ help:
 	@echo "... server"
 	@echo "... client"
 	@echo "... ft"
+	@echo "... client_src/srcs/cmd.o"
+	@echo "... client_src/srcs/cmd.i"
+	@echo "... client_src/srcs/cmd.s"
 	@echo "... client_src/srcs/error.o"
 	@echo "... client_src/srcs/error.i"
 	@echo "... client_src/srcs/error.s"
+	@echo "... client_src/srcs/event.o"
+	@echo "... client_src/srcs/event.i"
+	@echo "... client_src/srcs/event.s"
 	@echo "... client_src/srcs/main.o"
 	@echo "... client_src/srcs/main.i"
 	@echo "... client_src/srcs/main.s"
+	@echo "... client_src/srcs/main_loop.o"
+	@echo "... client_src/srcs/main_loop.i"
+	@echo "... client_src/srcs/main_loop.s"
+	@echo "... client_src/srcs/ring_buffer.o"
+	@echo "... client_src/srcs/ring_buffer.i"
+	@echo "... client_src/srcs/ring_buffer.s"
 	@echo "... client_src/srcs/set_client.o"
 	@echo "... client_src/srcs/set_client.i"
 	@echo "... client_src/srcs/set_client.s"

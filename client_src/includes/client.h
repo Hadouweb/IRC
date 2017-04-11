@@ -11,6 +11,13 @@
 # include "libft.h"
 
 # define BUF_SIZE	512
+# define MAX(a,b)	((a > b) ? a : b)
+enum	e_socket_type
+{
+	FREE,
+	SERVER,
+	CLIENT,
+};
 
 typedef	struct 			s_ring_buffer
 {
@@ -18,28 +25,44 @@ typedef	struct 			s_ring_buffer
 	int 				i;
 }						t_ring_buffer;
 
-typedef struct 			s_entity
+typedef struct 			s_fd
 {
-	int 				id;
+	int 				socket;
+	enum e_socket_type	type;
 	void				(*ft_read)();
 	void				(*ft_write)();
 	t_ring_buffer		buf_read;
 	t_ring_buffer		buf_write;
-}						t_entity;
+}						t_fd;
 
 typedef struct 			s_client
 {
-	t_entity			*entity;
+	t_fd				*me;
 	int 				ret_select;
 	uint16_t 			port;
+	char 				*hostname;
 	fd_set				readfds;
 	fd_set				writefds;
 }						t_client;
 
 
-void	print_usage(char *prog_name);
-void	print_error_exit(char *str, char *file, int line);
+void					print_usage(char *prog_name);
+void					print_error_exit(char *str, char *file, int line);
 
-void	init_client(t_client *client, uint16_t port);
+void					init_client(t_client *client, char *hostname, uint16_t port);
+
+void					event_write(t_client *client, int sc);
+void					event_read(t_client *client, int sc);
+
+void					set_socket(t_client *client);
+void					main_loop(t_client *client);
+void					is_set_socket(t_client *client);
+
+void					ring_buffer_read(t_client *client, char *str);
+void					ring_buffer_write(t_client *client, char *str);
+
+void					cmd_connect(t_client *client, char *cmd);
+
+void					print_error(char *error, char *error2);
 
 #endif

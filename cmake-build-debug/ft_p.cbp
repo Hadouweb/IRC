@@ -103,6 +103,7 @@
 					<Add directory="/Users/nle-bret/project/IRC/client_src/includes"/>
 					<Add directory="/Users/nle-bret/project/IRC/server_src"/>
 					<Add directory="/Users/nle-bret/project/IRC/server_src/includes"/>
+					<Add directory="/Users/nle-bret/project/IRC/libft/./includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -129,6 +130,7 @@
 					<Add directory="/Users/nle-bret/project/IRC/client_src/includes"/>
 					<Add directory="/Users/nle-bret/project/IRC/server_src"/>
 					<Add directory="/Users/nle-bret/project/IRC/server_src/includes"/>
+					<Add directory="/Users/nle-bret/project/IRC/libft/./includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -193,10 +195,22 @@
 		<Unit filename="/Users/nle-bret/project/IRC/client_src/includes/client.h">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/cmd.c">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/error.c">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/event.c">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/main.c">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/main_loop.c">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/ring_buffer.c">
 			<Option target="client"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/set_client.c">

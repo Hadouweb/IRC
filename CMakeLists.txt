@@ -14,6 +14,10 @@ set(SRCS_CLIENT
         client_src/srcs/main.c
         client_src/srcs/error.c
         client_src/srcs/set_client.c
+        client_src/srcs/event.c
+        client_src/srcs/main_loop.c
+        client_src/srcs/ring_buffer.c
+        client_src/srcs/cmd.c
     )
 set(HEADER_CLIENT client_src/includes/client.h)
 
@@ -46,5 +50,5 @@ add_executable(client ${SRCS_CLIENT} ${HEADER_CLIENT})
 add_executable(server ${SRCS_SERVER} ${HEADER_SERVER})
 #add_executable(BIRCD ${SRC_BIRCD})
 
-#target_link_libraries(client ft)
+target_link_libraries(client ft)
 target_link_libraries(server ft)

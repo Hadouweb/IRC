@@ -14,6 +14,10 @@ LIBNAME = $(LIBFT_PATH)/libft.a
 SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/error.c\
         $(SRCS_PATH)/set_client.c\
+        $(SRCS_PATH)/event.c\
+        $(SRCS_PATH)/main_loop.c\
+        $(SRCS_PATH)/ring_buffer.c\
+        $(SRCS_PATH)/cmd.c\
 
 OBJ = $(SRC:.c=.o)
 
