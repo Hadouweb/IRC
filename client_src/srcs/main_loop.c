@@ -23,19 +23,28 @@ void	main_loop(t_client *client)
 
 void	is_set_socket(t_client *client)
 {
-	int		s;
-	char 	*line;
+	int			s;
+	ssize_t		r;
+	char 		buff[BUF_SIZE + 1];
 
 	s = client->me->socket;
-	line = NULL;
 	if (FD_ISSET(s, &client->readfds))
-		client->me->ft_read(client, s);
-	if (FD_ISSET(s, &client->writefds))
-		client->me->ft_write(client, s);
-	if (FD_ISSET(STDIN_FILENO, &client->readfds) && get_next_line(0, &line) == 1)
 	{
-		line[ft_strlen(line)] = '\n';
-		ring_buffer_write(client, line);
-		ft_strdel(&line);
+		//printf("client want read\n");
+		client->me->ft_read(client, s);
+	}
+	if (FD_ISSET(s, &client->writefds))
+	{
+		//printf("client want write\n");
+		client->me->ft_write(client, s);
+	}
+	if (FD_ISSET(STDIN_FILENO, &client->readfds))
+	{
+		r = read(STDIN_FILENO, buff, BUF_SIZE);
+		if (r > 0)
+		{
+			buff[r] = '\0';
+			ring_buffer_write(client, buff);
+		}
 	}
 }

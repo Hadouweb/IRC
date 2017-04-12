@@ -20,6 +20,7 @@ void		event_read(t_client *client, int sc)
 	ssize_t		r;
 	char 		buff[BUF_SIZE + 1];
 
+	ft_bzero(buff, sizeof(buff));
 	r = recv(sc, buff, BUF_SIZE, 0);
 	if (r <= 0)
 	{

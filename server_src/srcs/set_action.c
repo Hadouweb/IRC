@@ -12,7 +12,7 @@ void		action_send_all(t_server *server, int sc, char *msg)
 	while (i < server->max_fd)
 	{
 		client = &server->fd_array[i];
-		if (chan->client_connected[i] && client->type == CLIENT && i != sc)
+		if (chan->client_connected[i] && client->type == CLIENT)
 			ft_strcpy(server->fd_array[i].buf_write.buff, msg);
 		i++;
 	}

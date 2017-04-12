@@ -27,7 +27,7 @@ void				join_channel(t_server *server, int sc, char *name)
 	chan->client_connected[sc] = 1;
 	server->fd_array[sc].curr_chan = chan;
 	chan->nb_client++;
-	debug_print_all_channel(server);
+	//debug_print_all_channel(server);
 }
 
 

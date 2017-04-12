@@ -55,7 +55,7 @@ void		leave_channel(t_server *server, int sc)
 		if (server->fd_array[sc].curr_chan->nb_client == 0)
 			delete_chan(&server->channel_list, server->fd_array[sc].curr_chan);
 	}
-	debug_print_all_channel(server);
+	//debug_print_all_channel(server);
 }
 
 void		try_leave_channel(t_server *server, int sc, char *name)

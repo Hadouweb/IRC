@@ -104,6 +104,7 @@ void					is_set_socket(t_server *server);
 void					print_log_error(t_server *server, int sc, char *str,
 										char *str2);
 void					print_log_new_client(t_server *server, int sc, struct sockaddr_in *sock_in);
+void					print_log_success(t_server *server, int sc, char *str, char *str2);
 
 void					ring_buffer_read(t_server *server, int sc, char *str);
 
@@ -117,5 +118,6 @@ void					init_server(t_server *server, uint16_t port);
 
 char 					*get_formated_msg(t_server *server, int sc, char *msg);
 char 					*get_formated_private_msg(t_server *server, int sc, char *msg);
+int 					find_end_msg(char *msg);
 
 #endif

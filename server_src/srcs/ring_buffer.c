@@ -50,7 +50,7 @@ void			ring_buffer_read(t_server *server, int sc, char *str)
 		server->fd_array[sc].buf_read.i++;
 		i++;
 	}
-	if (ft_strchr(ring_buffer, '\n'))
+	if (find_end_msg(ring_buffer))
 	{
 		convert_buffer(server, sc);
 		ft_bzero(&server->fd_array[sc].buf_read, sizeof(t_ring_buffer));

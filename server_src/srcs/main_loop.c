@@ -39,19 +39,15 @@ void	is_set_socket(t_server *server)
 	i = 0;
 	while ((i < server->max_fd) && (server->ret_select > 0))
 	{
-		if (server->fd_array[i].type == SERVER && FD_ISSET(i, &server->readfds))
-			printf("-------------------> readfds server\n");
-		if (server->fd_array[i].type == SERVER && FD_ISSET(i, &server->writefds))
-			printf("-------------------> writefds server\n");
 		if (FD_ISSET(i, &server->readfds))
 		{
+			//printf("fd %d want read\n", i);
 			server->fd_array[i].ft_read(server, i);
-			printf("-------------------> readfds\n");
 		}
 		if (FD_ISSET(i, &server->writefds))
 		{
+			//printf("fd %d want write\n", i);
 			server->fd_array[i].ft_write(server, i);
-			printf("-------------------> writefds\n");
 		}
 		if (FD_ISSET(i, &server->readfds) || FD_ISSET(i, &server->writefds))
 			server->ret_select--;

@@ -47,9 +47,7 @@ void			cmd_msg(t_server *server, int sc, char *cmd)
 	while (cmd[i] && cmd[i] != ' ' && cmd[i] != '\n')
 		i++;
 	cmd[i] = '\0';
-	printf("|%s|\n", name);
 	msg = &cmd[i + 1];
-	printf("MSG: [%s] %d\n", msg, i);
 	check_msg_cmd(server, sc, name, msg);
 }
 

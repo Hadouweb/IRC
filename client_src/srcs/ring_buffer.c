@@ -4,7 +4,6 @@ static void		call_action(t_client *client, char *msg)
 {
 	(void)client;
 	ft_putstr(msg);
-	ft_putstr("\n");
 }
 
 static void 	convert_buffer(t_client *client, char *ring_buffer)
