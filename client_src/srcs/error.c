@@ -2,11 +2,13 @@
 
 void	print_usage(char *prog_name)
 {
-	ft_putstr_fd("Usage: ", 2);
+	ft_putstr_fd("Usage: \n[", 2);
 	ft_putstr_fd(prog_name, 2);
 	ft_putstr_fd(" hostname", 2);
-	ft_putstr_fd(" port\n", 2);
-	exit(1);
+	ft_putstr_fd(" port]\n[", 2);
+	ft_putstr_fd(prog_name, 2);
+	ft_putstr_fd("] with default hostname (localhost)", 2);
+	ft_putstr_fd(" and default port (4242)\n", 2);
 }
 
 void	print_error_exit(char *str, char *file, int line)
