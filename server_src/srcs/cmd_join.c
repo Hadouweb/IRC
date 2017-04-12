@@ -47,11 +47,11 @@ void				cmd_join(t_server *server, int sc, char *cmd)
 		i++;
 	name[i] = '\0';
 	if (name[0] != '#')
-		send_error(server, sc, "The channel name must begin by '#'\n", NULL);
+		send_error(server, sc, "The channel name must begin by '#'", NULL);
 	else if (ft_strlen(name) > CHANNEL_SIZE)
-		send_error(server, sc, "The name is too long (200 characters max)\n", NULL);
+		send_error(server, sc, "The name is too long (200 characters max)", NULL);
 	else if (ft_strlen(name) < 2)
-		send_error(server, sc, "The name is too short (2 characters min)\n", NULL);
+		send_error(server, sc, "The name is too short (2 characters min)", NULL);
 	else
 		join_channel(server, sc, name);
 }

@@ -9,7 +9,7 @@ static int		check_duplicate_name(t_server *server, int sc, char *name)
 	{
 		if ((server->fd_array[i].type == CLIENT) && (i != sc))
 		{
-			printf("[%s] [%s]\n", name, server->fd_array[i].nickname);
+			//printf("[%s] [%s]\n", name, server->fd_array[i].nickname);
 			if (ft_strcmp(name, server->fd_array[i].nickname) == 0)
 				return (1);
 		}
@@ -34,9 +34,9 @@ void			cmd_nick(t_server *server, int sc, char *cmd)
 		i++;
 	name[i] = '\0';
 	if (ft_strlen(name) > 9)
-		send_error(server, sc, "The name is too long (9 characters max)\n", NULL);
+		send_error(server, sc, "The name is too long (9 characters max)", NULL);
 	else if (check_duplicate_name(server, sc, name))
-		send_error(server, sc, "This name is already taken\n", NULL);
+		send_error(server, sc, "This name is already taken", NULL);
 	else
 		ft_strcpy(server->fd_array[sc].nickname, name);
 }

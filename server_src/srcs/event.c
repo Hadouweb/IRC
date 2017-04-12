@@ -40,7 +40,7 @@ void		event_accept(t_server *server, int ss)
 	set_client_socket(server, sc);
 	if (server->curr_nb >= MAX_CLIENT + 1)
 	{
-		send_error(server, sc, "Sorry the server is full\n", NULL);
+		send_error(server, sc, "Sorry the server is full", NULL);
 		ft_bzero(&server->fd_array[sc], sizeof(t_fd));
 		close(sc);
 	}

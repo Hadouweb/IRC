@@ -22,9 +22,9 @@ static void		check_msg_cmd(t_server *server, int sc, char *name, char *msg)
 
 	client_dst = find_client_by_name(server, name);
 	if (client_dst == NULL)
-		send_error(server, sc, name, " does not exist\n");
+		send_error(server, sc, name, " does not exist");
 	else if (msg == NULL || ft_strlen(msg) == 0)
-		send_error(server, sc, "Can not send an empty message\n", NULL);
+		send_error(server, sc, "Can not send an empty message", NULL);
 	else
 	{
 		msg = get_formated_private_msg(server, sc, msg);

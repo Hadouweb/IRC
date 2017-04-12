@@ -64,9 +64,9 @@ void		try_leave_channel(t_server *server, int sc, char *name)
 
 	chan = get_channel_by_name(server, name);
 	if (chan == NULL)
-		send_error(server, sc, name, " is a unknown channel\n");
+		send_error(server, sc, name, " is a unknown channel");
 	else if (ft_strcmp(DEFAULT_CHAN, name) == 0)
-		send_error(server, sc, name, " is the default channel\n");
+		send_error(server, sc, name, " is the default channel");
 	else
 		join_channel(server, sc, DEFAULT_CHAN);
 }

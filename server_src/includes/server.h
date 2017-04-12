@@ -107,6 +107,7 @@ void					print_log_new_client(t_server *server, int sc, struct sockaddr_in *sock
 void					print_log_success(t_server *server, int sc, char *str, char *str2);
 
 void					ring_buffer_read(t_server *server, int sc, char *str);
+void					ring_buffer_write(t_server *server, int sc, char *str);
 
 void					action_send_all(t_server *server, int sc, char *msg);
 void 					action_send_to_one_client(t_server *server, int sc, char *msg);

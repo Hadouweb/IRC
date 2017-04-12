@@ -22,7 +22,8 @@ static void 	convert_buffer(t_client *client, char *ring_buffer)
 		while (ring_buffer[i] != '\n')
 			i++;
 		i++;
-		while (j < (int) ft_strlen(ring_buffer)) {
+		while (j < (int) ft_strlen(ring_buffer))
+		{
 			if (i >= BUF_SIZE)
 				i = 0;
 			buffer[j++] = ring_buffer[i++];

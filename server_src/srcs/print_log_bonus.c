@@ -14,7 +14,7 @@ void		print_log_error(t_server *server, int sc, char *str, char *str2)
 		ft_putstr(" ");
 		ft_putstr(str2);
 	}
-	ft_putstr(COLOR_END);
+	ft_putendl(COLOR_END);
 }
 
 void		print_log_success(t_server *server, int sc, char *str, char *str2)
@@ -31,7 +31,7 @@ void		print_log_success(t_server *server, int sc, char *str, char *str2)
 		ft_putstr(" ");
 		ft_putstr(str2);
 	}
-	ft_putstr(COLOR_END);
+	ft_putendl(COLOR_END);
 }
 
 void		print_log_new_client(t_server *server, int sc,
@@ -50,6 +50,5 @@ void		print_log_new_client(t_server *server, int sc,
 	ft_putstr(inet_ntoa(sock_in->sin_addr));
 	ft_putstr(":");
 	ft_putstr(ft_itoa(ntohs(sock_in->sin_port)));
-	ft_putstr(COLOR_END);
-	ft_putchar('\n');
+	ft_putendl(COLOR_END);
 }

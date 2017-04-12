@@ -13,14 +13,14 @@ void		action_send_all(t_server *server, int sc, char *msg)
 	{
 		client = &server->fd_array[i];
 		if (chan->client_connected[i] && client->type == CLIENT)
-			ft_strcpy(server->fd_array[i].buf_write.buff, msg);
+			ring_buffer_write(server, i, msg);
 		i++;
 	}
 }
 
 void 		action_send_to_one_client(t_server *server, int sc, char *msg)
 {
-	ft_strcpy(server->fd_array[sc].buf_write.buff, msg);
+	ring_buffer_write(server, sc, msg);
 }
 
 void		action_send_error(t_server *server, int sc, char *error, char *error2)
@@ -29,6 +29,6 @@ void		action_send_error(t_server *server, int sc, char *error, char *error2)
 	error = ft_strjoin("\033[31;1m", error);
 	if (error2 != NULL)
 		error = ft_strjoin_free(error, error2, 1);
-	error = ft_strjoin_free(error, "\033[0m", 1);
-	ft_strcpy(server->fd_array[sc].buf_write.buff, error);
+	error = ft_strjoin_free(error, "\033[0m\n", 1);
+	ring_buffer_write(server, sc, error);
 }

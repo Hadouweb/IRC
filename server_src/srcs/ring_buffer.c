@@ -56,3 +56,20 @@ void			ring_buffer_read(t_server *server, int sc, char *str)
 		ft_bzero(&server->fd_array[sc].buf_read, sizeof(t_ring_buffer));
 	}
 }
+
+void			ring_buffer_write(t_server *server, int sc, char *str)
+{
+	int 	i;
+	char 	*ring_buffer;
+
+	i = 0;
+	ring_buffer = server->fd_array[sc].buf_write.buff;
+	while (str[i])
+	{
+		if (server->fd_array[sc].buf_write.i >= BUF_SIZE)
+			server->fd_array[sc].buf_write.i = 0;
+		ring_buffer[server->fd_array[sc].buf_write.i] = str[i];
+		server->fd_array[sc].buf_write.i++;
+		i++;
+	}
+}
