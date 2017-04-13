@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/nle-bret/project/IRC/client_src/srcs/event.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir/client_src/srcs/event.c.o"
   "/Users/nle-bret/project/IRC/client_src/srcs/main.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir/client_src/srcs/main.c.o"
   "/Users/nle-bret/project/IRC/client_src/srcs/main_loop.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir/client_src/srcs/main_loop.c.o"
+  "/Users/nle-bret/project/IRC/client_src/srcs/msg_format_rfc.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir/client_src/srcs/msg_format_rfc.c.o"
   "/Users/nle-bret/project/IRC/client_src/srcs/ring_buffer.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir/client_src/srcs/ring_buffer.c.o"
   "/Users/nle-bret/project/IRC/client_src/srcs/set_client.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/client.dir/client_src/srcs/set_client.c.o"
   )

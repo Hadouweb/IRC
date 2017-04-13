@@ -112,6 +112,7 @@ void					ring_buffer_write(t_server *server, int sc, char *str);
 void					action_send_all(t_server *server, int sc, char *msg);
 void 					action_send_to_one_client(t_server *server, int sc, char *msg);
 void					action_send_error(t_server *server, int sc, char *error, char *error2);
+void					action_send_name(t_server *server, int sc);
 
 void					set_client_socket(t_server *server, int sc);
 
@@ -120,5 +121,7 @@ void					init_server(t_server *server, uint16_t port);
 char 					*get_formated_msg(t_server *server, int sc, char *msg);
 char 					*get_formated_private_msg(t_server *server, int sc, char *msg);
 int 					find_end_msg(char *msg);
+
+void					set_msg(t_server *server, int sc, char *msg);
 
 #endif

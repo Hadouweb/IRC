@@ -8,15 +8,25 @@
 # include <unistd.h>
 # include <netdb.h>
 # include <stdio.h>
+# include <ncurses.h>
 # include "libft.h"
 
 # define BUF_SIZE	512
+# define NICKNAME_SIZE 9
 # define MAX(a,b)	((a > b) ? a : b)
+
 enum	e_socket_type
 {
 	FREE,
 	SERVER,
 	CLIENT,
+};
+
+enum 	e_ip_version
+{
+	IPV4,
+	IPV6,
+	INVALID,
 };
 
 typedef	struct 			s_ring_buffer
@@ -31,6 +41,7 @@ typedef struct 			s_fd
 	enum e_socket_type	type;
 	void				(*ft_read)();
 	void				(*ft_write)();
+	char 				nickname[NICKNAME_SIZE + 1];
 	t_ring_buffer		buf_read;
 	t_ring_buffer		buf_write;
 }						t_fd;
@@ -64,5 +75,10 @@ void					ring_buffer_write(t_client *client, char *str);
 void					cmd_connect(t_client *client, char *cmd);
 
 void					print_error(char *error, char *error2);
+
+void					set_msg(t_client *client, char *msg);
+
+void					nc_init(void);
+void					print_my_nickname(t_client *client);
 
 #endif

@@ -1,9 +1,24 @@
 #include "client.h"
 
+static void		set_nickname(t_client *client, char *msg)
+{
+	ft_bzero(client->me->nickname, ft_strlen(client->me->nickname));
+	msg[ft_strlen(msg) - 1] = '\0';
+	ft_strcpy(client->me->nickname, &msg[1]);
+	print_my_nickname(client);
+}
+
 static void		call_action(t_client *client, char *msg)
 {
-	(void)client;
-	ft_putstr(msg);
+	if (msg[0] == ':')
+		set_nickname(client, msg);
+	else
+	{
+		ft_putstr("\r                                    ");
+		ft_putstr("\r");
+		ft_putstr(msg);
+		print_my_nickname(client);
+	}
 }
 
 static void 	convert_buffer(t_client *client, char *ring_buffer)

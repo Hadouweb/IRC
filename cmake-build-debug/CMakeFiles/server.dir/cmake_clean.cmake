@@ -16,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.o"
   "CMakeFiles/server.dir/server_src/srcs/debug.c.o"
   "CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o"
+  "CMakeFiles/server.dir/server_src/srcs/msg_format_rfc.c.o"
   "server.pdb"
   "server"
 )

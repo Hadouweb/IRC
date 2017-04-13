@@ -21,6 +21,14 @@ void	main_loop(t_client *client)
 	}
 }
 
+void	print_my_nickname(t_client *client)
+{
+	ft_putstr("\r                                    ");
+	ft_putstr("\r");
+	ft_putstr(client->me->nickname);
+	ft_putstr(" $> ");
+}
+
 void	is_set_socket(t_client *client)
 {
 	int			s;
@@ -40,11 +48,14 @@ void	is_set_socket(t_client *client)
 	}
 	if (FD_ISSET(STDIN_FILENO, &client->readfds))
 	{
+		//ft_putstr("$> ");
 		r = read(STDIN_FILENO, buff, BUF_SIZE);
 		if (r > 0)
 		{
 			buff[r] = '\0';
-			ring_buffer_write(client, buff);
+			if (ft_strchr(buff, '\n') != 0)
+				print_my_nickname(client);
+			set_msg(client, buff);
 		}
 	}
 }

@@ -3,18 +3,18 @@
 static void		set_server_socket(t_server *server)
 {
 	int					socket_server;
-	struct sockaddr_in	sock_in;
+	struct sockaddr_in6	sock_in;
 	struct protoent		*protocol;
 
 	protocol = getprotobyname("tcp");
 	if (protocol == NULL)
 		print_error_exit("getprotobyname", __FILE__, __LINE__);
-	socket_server = socket(PF_INET, SOCK_STREAM, protocol->p_proto);
+	socket_server = socket(PF_INET6, SOCK_STREAM, protocol->p_proto);
 	if (socket_server == -1)
 		print_error_exit("socket", __FILE__, __LINE__);
-	sock_in.sin_family = AF_INET;
-	sock_in.sin_addr.s_addr = INADDR_ANY;
-	sock_in.sin_port = htons(server->port);
+	sock_in.sin6_family = AF_INET6;
+	sock_in.sin6_addr = in6addr_any;
+	sock_in.sin6_port = htons(server->port);
 	if (bind(socket_server, (struct sockaddr*)&sock_in, sizeof(sock_in)) == -1)
 		print_error_exit("bind", __FILE__, __LINE__);
 	if (listen(socket_server, 42) == -1)

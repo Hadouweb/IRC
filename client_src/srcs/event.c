@@ -1,6 +1,5 @@
 #include "client.h"
 
-
 void		event_write(t_client *client, int sc)
 {
 	if (ft_strncmp(client->me->buf_write.buff, "/connect ", 8) == 0)

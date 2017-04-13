@@ -45,5 +45,8 @@ void		event_accept(t_server *server, int ss)
 		close(sc);
 	}
 	else
+	{
 		print_log_new_client(server, sc, &sock_in);
+		action_send_name(server, sc);
+	}
 }

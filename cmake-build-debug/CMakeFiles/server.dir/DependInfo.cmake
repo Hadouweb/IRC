@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/nle-bret/project/IRC/server_src/srcs/event.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/event.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/main.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/main.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/main_loop.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/main_loop.c.o"
+  "/Users/nle-bret/project/IRC/server_src/srcs/msg_format_rfc.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/msg_format_rfc.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/ring_buffer.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/set_action.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/set_action.c.o"

@@ -19,8 +19,6 @@ int		main(int ac, char **av)
 	}
 	else if (ac == 3)
 		init_client(&client, av[1], (uint16_t) ft_atoi(av[2]));
-	else
-		exit(1);
 	main_loop(&client);
 	return (0);
 }
