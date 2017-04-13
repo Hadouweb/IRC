@@ -15,6 +15,7 @@ void		event_read(t_server *server, int sc)
 	r = recv(sc, buff, BUF_SIZE, 0);
 	if (r <= 0)
 	{
+		print_log_success(server, sc, "leave the IRC server", NULL);
 		leave_channel(server, sc);
 		close(sc);
 		ft_bzero(&server->fd_array[sc], sizeof(t_fd));

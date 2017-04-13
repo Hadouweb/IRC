@@ -23,7 +23,6 @@ void	delete_chan(t_list *list, t_channel *chan)
 
 	if (chan == NULL || list == NULL || ft_strcmp(chan->name, DEFAULT_CHAN) == 0)
 		return ;
-	printf("delete channel %s\n", chan->name);
 	n_prev = chan->link.prev;
 	n_next = chan->link.next;
 	if (n_prev != NULL && n_next != NULL)
@@ -68,7 +67,10 @@ void		try_leave_channel(t_server *server, int sc, char *name)
 	else if (ft_strcmp(DEFAULT_CHAN, name) == 0)
 		send_error(server, sc, name, " is the default channel");
 	else
+	{
+		print_log_success(server, sc, "command /leave", name);
 		join_channel(server, sc, DEFAULT_CHAN);
+	}
 }
 
 void		cmd_leave(t_server *server, int sc, char *cmd)

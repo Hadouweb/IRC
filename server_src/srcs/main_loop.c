@@ -41,12 +41,10 @@ void	is_set_socket(t_server *server)
 	{
 		if (FD_ISSET(i, &server->readfds))
 		{
-			//printf("fd %d want read\n", i);
 			server->fd_array[i].ft_read(server, i);
 		}
 		if (FD_ISSET(i, &server->writefds))
 		{
-			//printf("fd %d want write\n", i);
 			server->fd_array[i].ft_write(server, i);
 		}
 		if (FD_ISSET(i, &server->readfds) || FD_ISSET(i, &server->writefds))

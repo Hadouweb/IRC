@@ -25,7 +25,9 @@ void	print_my_nickname(t_client *client)
 {
 	ft_putstr("\r                                    ");
 	ft_putstr("\r");
+	ft_putstr(COLOR_NICK_NAME"<");
 	ft_putstr(client->me->nickname);
+	ft_putstr(">"COLOR_END);
 	ft_putstr(" $> ");
 }
 

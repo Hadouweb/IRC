@@ -19,6 +19,7 @@ enum	e_socket_type
 };
 
 # define COLOR_NICK_NAME "\033[33;1m"
+# define COLOR_NICK_NAME_PRIVATE "\033[35;1m"
 # define COLOR_SUCCESS "\033[32;1m"
 # define COLOR_ERROR "\033[31;1m"
 
@@ -30,6 +31,12 @@ enum	e_socket_type
 # define MAX_CLIENT 5000
 # define DEFAULT_CHAN "#general"
 # define MAX(a,b)	((a > b) ? a : b)
+
+enum 	e_response
+{
+	SUCCESS_CHANGE_NICKNAME,
+	FAIL_CHANGE_NICKNAME,
+};
 
 typedef	struct 			s_ring_buffer
 {

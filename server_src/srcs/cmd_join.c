@@ -53,6 +53,9 @@ void				cmd_join(t_server *server, int sc, char *cmd)
 	else if (ft_strlen(name) < 2)
 		send_error(server, sc, "The name is too short (2 characters min)", NULL);
 	else
+	{
+		print_log_success(server, sc, "command /join", name);
 		join_channel(server, sc, name);
+	}
 }
 

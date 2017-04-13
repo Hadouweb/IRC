@@ -15,6 +15,12 @@
 # define NICKNAME_SIZE 9
 # define MAX(a,b)	((a > b) ? a : b)
 
+# define COLOR_NICK_NAME "\033[33;1m"
+# define COLOR_SUCCESS "\033[32;1m"
+# define COLOR_ERROR "\033[31;1m"
+
+# define COLOR_END "\033[0m"
+
 enum	e_socket_type
 {
 	FREE,

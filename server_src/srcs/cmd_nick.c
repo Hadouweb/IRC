@@ -38,6 +38,7 @@ void			cmd_nick(t_server *server, int sc, char *cmd)
 		send_error(server, sc, "This name is already taken", NULL);
 	else
 	{
+		print_log_success(server, sc, "command /nick", name);
 		ft_strcpy(server->fd_array[sc].nickname, name);
 		action_send_name(server, sc);
 	}
