@@ -5,7 +5,7 @@ static void		call_action(t_server *server, int sc, char *msg)
 	if (msg[0] == '/')
 		cmd(server, sc, msg);
 	else
-		action_send_all(server, sc, msg);
+		action_send_to_chan(server, sc, NULL, msg);
 }
 
 static void 	convert_buffer(t_server *server, int sc)

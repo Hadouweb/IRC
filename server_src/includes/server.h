@@ -54,7 +54,7 @@ typedef struct			s_channel
 
 typedef struct 			s_fd
 {
-	int 				id;
+	int 				socket;
 	enum e_socket_type	type;
 	void				(*ft_read)();
 	void				(*ft_write)();
@@ -82,10 +82,10 @@ void					cmd_join(t_server *server, int sc, char *cmd);
 void					join_channel(t_server *server, int sc, char *name);
 
 void					cmd_leave(t_server *server, int sc, char *cmd);
-void					leave_channel(t_server *server, int sc);
+void					leave_channel(t_server *server, t_channel *chan, int sc);
 void					try_leave_channel(t_server *server, int sc, char *name);
-t_channel				*get_channel_by_name(t_server *server, char *name);
 void					delete_chan(t_list *list, t_channel *chan);
+void					leave_all_channel(t_server *server, int sc);
 
 void					cmd_msg(t_server *server, int sc, char *cmd);
 
@@ -116,8 +116,9 @@ void					print_log_success(t_server *server, int sc, char *str, char *str2);
 void					ring_buffer_read(t_server *server, int sc, char *str);
 void					ring_buffer_write(t_server *server, int sc, char *str);
 
-void					action_send_all(t_server *server, int sc, char *msg);
-void 					action_send_to_one_client(t_server *server, int sc, char *msg);
+void action_send_to_chan(t_server *server, int sc, t_channel *name, char *msg);
+void 					action_send_to_client(t_server *server, int sc,
+											  char *msg);
 void					action_send_error(t_server *server, int sc, char *error, char *error2);
 void					action_send_name(t_server *server, int sc);
 
@@ -130,5 +131,8 @@ char 					*get_formated_private_msg(t_server *server, int sc, char *msg);
 int 					find_end_msg(char *msg);
 
 void					set_msg(t_server *server, int sc, char *msg);
+
+t_channel				*find_channel_by_name(t_server *server, char *name);
+t_fd					*find_client_by_name(t_server *server, char *name);
 
 #endif

@@ -4,7 +4,7 @@ static t_channel	*add_channel(t_server *server, char *name)
 {
 	t_channel	*chan;
 
-	chan = get_channel_by_name(server, name);
+	chan = find_channel_by_name(server, name);
 	if (chan != NULL)
 		return (chan);
 	chan = (t_channel*)malloc(sizeof(t_channel));
@@ -22,7 +22,7 @@ void				join_channel(t_server *server, int sc, char *name)
 {
 	t_channel	*chan;
 
-	leave_channel(server, sc);
+	//leave_channel(server, sc);
 	chan = add_channel(server, name);
 	chan->client_connected[sc] = 1;
 	server->fd_array[sc].curr_chan = chan;

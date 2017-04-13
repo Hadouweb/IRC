@@ -1,36 +1,36 @@
 #include "server.h"
 
-static t_fd		*find_client_by_name(t_server *server, char *name)
-{
-	t_fd		*client;
-	int 		i;
-
-	i = 0;
-	while (i < server->max_fd)
-	{
-		client = &server->fd_array[i];
-		if (client->type == CLIENT && ft_strcmp(client->nickname, name) == 0)
-			return (client);
-		i++;
-	}
-	return (NULL);
-}
-
-static void		check_msg_cmd(t_server *server, int sc, char *name, char *msg)
+static void		check_msg_cmd_client(t_server *server, int sc, char *name, char *msg)
 {
 	t_fd	*client_dst;
 
 	client_dst = find_client_by_name(server, name);
 	if (client_dst == NULL)
 		send_error(server, sc, name, " does not exist");
-	else if (msg == NULL || ft_strlen(msg) == 0)
-		send_error(server, sc, "Can not send an empty message", NULL);
 	else
 	{
 		msg = get_formated_private_msg(server, sc, msg);
-		action_send_to_one_client(server, client_dst->id, msg);
+		action_send_to_client(server, client_dst->socket, msg);
 	}
 }
+
+static void		check_msg_cmd_channel(t_server *server, int sc, char *name, char *msg)
+{
+	t_channel	*chan;
+	t_fd		*client;
+
+	chan = find_channel_by_name(server, name);
+	client = &server->fd_array[sc];
+	if (chan == NULL)
+		send_error(server, sc, name, " does not exist");
+	else if (chan->client_connected[client->socket] == 0)
+		send_error(server, sc, "You are not on the channel", name);
+	else
+	{
+		action_send_to_chan(server, client->socket, chan, msg);
+	}
+}
+
 
 void			cmd_msg(t_server *server, int sc, char *cmd)
 {
@@ -48,6 +48,9 @@ void			cmd_msg(t_server *server, int sc, char *cmd)
 		i++;
 	cmd[i] = '\0';
 	msg = &cmd[i + 1];
-	check_msg_cmd(server, sc, name, msg);
+	if (name && name [0] == '#')
+		check_msg_cmd_channel(server, sc, name, msg);
+	else
+		check_msg_cmd_client(server, sc, name, msg);
 }
 

@@ -16,7 +16,7 @@ void		event_read(t_server *server, int sc)
 	if (r <= 0)
 	{
 		print_log_success(server, sc, "leave the IRC server", NULL);
-		leave_channel(server, sc);
+		leave_all_channel(server, sc);
 		close(sc);
 		ft_bzero(&server->fd_array[sc], sizeof(t_fd));
 	}
