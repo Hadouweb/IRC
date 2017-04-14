@@ -40,9 +40,7 @@ set(SRCS_SERVER
         server_src/srcs/cmd_list.c
         server_src/srcs/cmd_whois.c
         server_src/srcs/ring_buffer.c
-        server_src/srcs/debug.c
         server_src/srcs/print_log_bonus.c
-        server_src/srcs/msg_format_rfc.c
         server_src/srcs/util_channel.c
     )
 set(HEADER_SERVER server_src/includes/server.h)

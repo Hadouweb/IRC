@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   set_client.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:26:41 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:26:42 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void			set_client_socket(t_server *server, int sc)
 {
-	char 	*default_name;
+	char	*default_name;
 
 	if (server->fd_array[sc].type != SERVER)
 	{
@@ -16,4 +28,3 @@ void			set_client_socket(t_server *server, int sc)
 		join_channel(server, sc, DEFAULT_CHAN);
 	}
 }
-

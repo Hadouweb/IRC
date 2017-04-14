@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd_whois.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:25:28 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:30 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 static t_fd		*get_client_by_name(t_server *server, char *name)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (i < server->max_fd)
@@ -17,11 +29,11 @@ static t_fd		*get_client_by_name(t_server *server, char *name)
 	return (NULL);
 }
 
-static char 	*get_chan_by_user(t_server *server, int sc)
+static char		*get_chan_by_user(t_server *server, int sc)
 {
 	t_link		*n;
 	t_channel	*chan;
-	char 		*all_chan;
+	char		*all_chan;
 
 	n = server->channel_list.head;
 	all_chan = NULL;
@@ -44,8 +56,8 @@ static char 	*get_chan_by_user(t_server *server, int sc)
 
 static void		prepare_data(t_server *server, int sc, t_fd *client)
 {
-	char 	*rep;
-	char 	*all_chan;
+	char	*rep;
+	char	*all_chan;
 
 	rep = ft_strdup("The user ");
 	rep = ft_strjoin_free(rep, client->nickname, 1);
@@ -62,9 +74,9 @@ static void		prepare_data(t_server *server, int sc, t_fd *client)
 
 void			cmd_whois(t_server *server, int sc, char *cmd)
 {
-	char 	*name;
+	char	*name;
 	t_fd	*client;
-	int 	i;
+	int		i;
 
 	if (server && sc)
 		;

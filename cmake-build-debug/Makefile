@@ -581,33 +581,6 @@ server_src/srcs/cmd_whois.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_whois.c.s
 .PHONY : server_src/srcs/cmd_whois.c.s
 
-server_src/srcs/debug.o: server_src/srcs/debug.c.o
-
-.PHONY : server_src/srcs/debug.o
-
-# target to build an object file
-server_src/srcs/debug.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/debug.c.o
-.PHONY : server_src/srcs/debug.c.o
-
-server_src/srcs/debug.i: server_src/srcs/debug.c.i
-
-.PHONY : server_src/srcs/debug.i
-
-# target to preprocess a source file
-server_src/srcs/debug.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/debug.c.i
-.PHONY : server_src/srcs/debug.c.i
-
-server_src/srcs/debug.s: server_src/srcs/debug.c.s
-
-.PHONY : server_src/srcs/debug.s
-
-# target to generate assembly for a file
-server_src/srcs/debug.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/debug.c.s
-.PHONY : server_src/srcs/debug.c.s
-
 server_src/srcs/error.o: server_src/srcs/error.c.o
 
 .PHONY : server_src/srcs/error.o
@@ -715,33 +688,6 @@ server_src/srcs/main_loop.s: server_src/srcs/main_loop.c.s
 server_src/srcs/main_loop.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/main_loop.c.s
 .PHONY : server_src/srcs/main_loop.c.s
-
-server_src/srcs/msg_format_rfc.o: server_src/srcs/msg_format_rfc.c.o
-
-.PHONY : server_src/srcs/msg_format_rfc.o
-
-# target to build an object file
-server_src/srcs/msg_format_rfc.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/msg_format_rfc.c.o
-.PHONY : server_src/srcs/msg_format_rfc.c.o
-
-server_src/srcs/msg_format_rfc.i: server_src/srcs/msg_format_rfc.c.i
-
-.PHONY : server_src/srcs/msg_format_rfc.i
-
-# target to preprocess a source file
-server_src/srcs/msg_format_rfc.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/msg_format_rfc.c.i
-.PHONY : server_src/srcs/msg_format_rfc.c.i
-
-server_src/srcs/msg_format_rfc.s: server_src/srcs/msg_format_rfc.c.s
-
-.PHONY : server_src/srcs/msg_format_rfc.s
-
-# target to generate assembly for a file
-server_src/srcs/msg_format_rfc.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/msg_format_rfc.c.s
-.PHONY : server_src/srcs/msg_format_rfc.c.s
 
 server_src/srcs/print_log_bonus.o: server_src/srcs/print_log_bonus.c.o
 
@@ -991,9 +937,6 @@ help:
 	@echo "... server_src/srcs/cmd_whois.o"
 	@echo "... server_src/srcs/cmd_whois.i"
 	@echo "... server_src/srcs/cmd_whois.s"
-	@echo "... server_src/srcs/debug.o"
-	@echo "... server_src/srcs/debug.i"
-	@echo "... server_src/srcs/debug.s"
 	@echo "... server_src/srcs/error.o"
 	@echo "... server_src/srcs/error.i"
 	@echo "... server_src/srcs/error.s"
@@ -1006,9 +949,6 @@ help:
 	@echo "... server_src/srcs/main_loop.o"
 	@echo "... server_src/srcs/main_loop.i"
 	@echo "... server_src/srcs/main_loop.s"
-	@echo "... server_src/srcs/msg_format_rfc.o"
-	@echo "... server_src/srcs/msg_format_rfc.i"
-	@echo "... server_src/srcs/msg_format_rfc.s"
 	@echo "... server_src/srcs/print_log_bonus.o"
 	@echo "... server_src/srcs/print_log_bonus.i"
 	@echo "... server_src/srcs/print_log_bonus.s"

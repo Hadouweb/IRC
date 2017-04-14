@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd_msg.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:25:13 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:14 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
-static void		check_msg_cmd_client(t_server *server, int sc, char *name, char *msg)
+static void		check_msg_cmd_client(t_server *server, int sc,
+	char *name, char *msg)
 {
 	t_fd	*client_dst;
 
@@ -15,7 +28,8 @@ static void		check_msg_cmd_client(t_server *server, int sc, char *name, char *ms
 	}
 }
 
-static void		check_msg_cmd_channel(t_server *server, int sc, char *name, char *msg)
+static void		check_msg_cmd_channel(t_server *server, int sc,
+	char *name, char *msg)
 {
 	t_channel	*chan;
 	t_fd		*client;
@@ -32,12 +46,11 @@ static void		check_msg_cmd_channel(t_server *server, int sc, char *name, char *m
 	}
 }
 
-
 void			cmd_msg(t_server *server, int sc, char *cmd)
 {
-	char 	*name;
-	char 	*msg;
-	int 	i;
+	char	*name;
+	char	*msg;
+	int		i;
 
 	if (server && sc)
 		;
@@ -49,9 +62,8 @@ void			cmd_msg(t_server *server, int sc, char *cmd)
 		i++;
 	cmd[i] = '\0';
 	msg = &cmd[i + 1];
-	if (name && name [0] == '#')
+	if (name && name[0] == '#')
 		check_msg_cmd_channel(server, sc, name, msg);
 	else
 		check_msg_cmd_client(server, sc, name, msg);
 }
-

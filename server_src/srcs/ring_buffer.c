@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ring_buffer.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:26:29 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:26:30 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 static void		call_action(t_server *server, int sc, char *msg)
 {
-	char 	*tmp_msg;
+	char		*tmp_msg;
 
 	tmp_msg = ft_strdup(msg);
 	if (msg[0] == '/')
@@ -12,12 +24,12 @@ static void		call_action(t_server *server, int sc, char *msg)
 	ft_strdel(&tmp_msg);
 }
 
-static void 	convert_buffer(t_server *server, int sc)
+static void		convert_buffer(t_server *server, int sc)
 {
-	char 	buffer[BUF_SIZE + 1];
-	char 	*ring_buffer;
-	int 	i;
-	int 	j;
+	char	buffer[BUF_SIZE + 1];
+	char	*ring_buffer;
+	int		i;
+	int		j;
 
 	ft_bzero(&buffer, sizeof(buffer));
 	i = 0;
@@ -30,7 +42,8 @@ static void 	convert_buffer(t_server *server, int sc)
 		while (ring_buffer[i] != '\n')
 			i++;
 		i++;
-		while (j < (int) ft_strlen(ring_buffer)) {
+		while (j < (int)ft_strlen(ring_buffer))
+		{
 			if (i >= BUF_SIZE)
 				i = 0;
 			buffer[j++] = ring_buffer[i++];
@@ -41,8 +54,8 @@ static void 	convert_buffer(t_server *server, int sc)
 
 void			ring_buffer_read(t_server *server, int sc, char *str)
 {
-	int 	i;
-	char 	*ring_buffer;
+	int		i;
+	char	*ring_buffer;
 
 	i = 0;
 	ring_buffer = server->fd_array[sc].buf_read.buff;
@@ -63,8 +76,8 @@ void			ring_buffer_read(t_server *server, int sc, char *str)
 
 void			ring_buffer_write(t_server *server, int sc, char *str)
 {
-	int 	i;
-	char 	*ring_buffer;
+	int		i;
+	char	*ring_buffer;
 
 	i = 0;
 	ring_buffer = server->fd_array[sc].buf_write.buff;

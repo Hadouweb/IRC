@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd_join.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:24:58 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:00 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 static t_channel	*add_channel(t_server *server, char *name)
@@ -23,21 +35,18 @@ void				join_channel(t_server *server, int sc, char *name)
 {
 	t_channel	*chan;
 
-	//leave_channel(server, sc);
 	chan = add_channel(server, name);
 	chan->client_connected[sc] = 1;
 	server->fd_array[sc].curr_chan = chan;
 	chan->nb_client++;
-	//debug_print_all_channel(server);
 }
 
-
-void				cmd_join(t_server *server, int sc, char *cmd)
+void				cmd_join(t_server *s, int sc, char *cmd)
 {
-	char 	*name;
-	int 	i;
+	char	*name;
+	int		i;
 
-	if (server && sc)
+	if (s && sc)
 		;
 	i = 6;
 	while (cmd[i] == ' ' || cmd[i] == '\t')
@@ -48,16 +57,15 @@ void				cmd_join(t_server *server, int sc, char *cmd)
 		i++;
 	name[i] = '\0';
 	if (name[0] != '#')
-		send_error(server, sc, "The channel name must begin by '#'", NULL);
+		send_error(s, sc, "The channel name must begin by '#'", NULL);
 	else if (ft_strlen(name) > CHANNEL_SIZE)
-		send_error(server, sc, "The name is too long (200 characters max)", NULL);
+		send_error(s, sc, "The name is too long (200 characters max)", NULL);
 	else if (ft_strlen(name) < 2)
-		send_error(server, sc, "The name is too short (2 characters min)", NULL);
+		send_error(s, sc, "The name is too short (2 characters min)", NULL);
 	else
 	{
-		print_log_success(server, sc, "command /join", name);
-		join_channel(server, sc, name);
+		print_log_success(s, sc, "command /join", name);
+		join_channel(s, sc, name);
 	}
 	ft_strdel(&name);
 }
-

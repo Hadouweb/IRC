@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   set_action.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:26:35 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:26:36 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
-void		action_send_to_chan(t_server *server, int sc, t_channel *chan, char *msg)
+void		action_send_to_chan(t_server *server, int sc,
+	t_channel *chan, char *msg)
 {
 	int			i;
 	t_fd		*client;
@@ -13,29 +26,30 @@ void		action_send_to_chan(t_server *server, int sc, t_channel *chan, char *msg)
 	{
 		client = &server->fd_array[i];
 		if (chan->client_connected[i] && client->type == CLIENT && i != sc)
-			set_msg(server, i, msg);
+			ring_buffer_write(server, i, msg);
 		i++;
 	}
 	ft_strdel(&msg);
 }
 
-void 		action_send_to_client(t_server *server, int sc, char *msg)
+void		action_send_to_client(t_server *server, int sc, char *msg)
 {
-	set_msg(server, sc, msg);
+	ring_buffer_write(server, sc, msg);
 }
 
 void		action_send_name(t_server *server, int sc)
 {
-	char 	*buff;
+	char	*buff;
 
 	buff = ft_strdup(":");
 	buff = ft_strjoin_free(buff, server->fd_array[sc].nickname, 1);
 	buff = ft_strjoin_free(buff, "\n", 1);
-	set_msg(server, sc, buff);
+	ring_buffer_write(server, sc, buff);
 	ft_strdel(&buff);
 }
 
-void		action_send_error(t_server *server, int sc, char *error, char *error2)
+void		action_send_error(t_server *server, int sc,
+	char *error, char *error2)
 {
 	(void)server;
 	error = ft_strjoin("\033[31;1m", error);
@@ -45,6 +59,6 @@ void		action_send_error(t_server *server, int sc, char *error, char *error2)
 		error = ft_strjoin_free(error, error2, 1);
 	}
 	error = ft_strjoin_free(error, "\033[0m\n", 1);
-	set_msg(server, sc, error);
+	ring_buffer_write(server, sc, error);
 	ft_strdel(&error);
 }

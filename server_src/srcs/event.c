@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   event.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:25:58 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:59 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void		event_write(t_server *server, int sc)
@@ -10,7 +22,7 @@ void		event_write(t_server *server, int sc)
 void		event_read(t_server *server, int sc)
 {
 	ssize_t		r;
-	char 		buff[BUF_SIZE + 1];
+	char		buff[BUF_SIZE + 1];
 
 	r = recv(sc, buff, BUF_SIZE, 0);
 	if (r <= 0)

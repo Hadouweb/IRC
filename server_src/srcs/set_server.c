@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   set_server.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:26:46 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:26:47 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 static void		set_server_socket(t_server *server)
@@ -27,7 +39,7 @@ static void		set_server_socket(t_server *server)
 void			init_server(t_server *server, uint16_t port)
 {
 	struct rlimit	rlp;
-	int 			i;
+	int				i;
 
 	if (getrlimit(RLIMIT_NOFILE, &rlp) == -1)
 		print_error_exit("getrlimit", __FILE__, __LINE__);
@@ -44,4 +56,3 @@ void			init_server(t_server *server, uint16_t port)
 	server->port = port;
 	set_server_socket(server);
 }
-

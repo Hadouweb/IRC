@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd_leave.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:25:03 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:04 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
-void	delete_chan(t_list *list, t_channel *chan)
+void		delete_chan(t_list *list, t_channel *chan)
 {
 	t_link	*n_prev;
 	t_link	*n_next;
 
-	if (chan == NULL || list == NULL || ft_strcmp(chan->name, DEFAULT_CHAN) == 0)
+	if (chan == NULL || list == NULL ||
+		ft_strcmp(chan->name, DEFAULT_CHAN) == 0)
 		return ;
 	n_prev = chan->link.prev;
 	n_next = chan->link.next;
@@ -38,7 +51,7 @@ void		leave_channel(t_server *server, t_channel *chan, int sc)
 
 void		leave_all_channel(t_server *server, int sc)
 {
-	t_link	*n;
+	t_link		*n;
 	t_channel	*chan;
 
 	n = server->channel_list.head;
@@ -69,8 +82,8 @@ void		try_leave_channel(t_server *server, int sc, char *name)
 
 void		cmd_leave(t_server *server, int sc, char *cmd)
 {
-	char 	*name;
-	int 	i;
+	char	*name;
+	int		i;
 
 	i = 7;
 	while (cmd[i] == ' ' || cmd[i] == '\t')

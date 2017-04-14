@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd_nick.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:25:18 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:19 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 static int		check_duplicate_name(t_server *server, int sc, char *name)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (i < server->max_fd)
@@ -19,8 +31,8 @@ static int		check_duplicate_name(t_server *server, int sc, char *name)
 
 void			cmd_nick(t_server *server, int sc, char *cmd)
 {
-	char 	*name;
-	int 	i;
+	char	*name;
+	int		i;
 
 	if (server && sc)
 		;

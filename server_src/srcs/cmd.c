@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:24:54 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:24:55 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
-void 	cmd(t_server *server, int sc, char *cmd)
+void	cmd(t_server *server, int sc, char *cmd)
 {
 	if (ft_strncmp(cmd, "/nick ", 6) == 0)
 		cmd_nick(server, sc, cmd);

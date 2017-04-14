@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:27:02 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:27:03 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SERVER_H
 # define SERVER_H
 
@@ -32,57 +44,52 @@ enum	e_socket_type
 # define DEFAULT_CHAN "#general"
 # define MAX(a,b)	((a > b) ? a : b)
 
-enum 	e_response
+typedef	struct			s_ring_buffer
 {
-	SUCCESS_CHANGE_NICKNAME,
-	FAIL_CHANGE_NICKNAME,
-};
-
-typedef	struct 			s_ring_buffer
-{
-	char 				buff[BUF_SIZE + 1];
-	int 				i;
+	char				buff[BUF_SIZE + 1];
+	int					i;
 }						t_ring_buffer;
 
 typedef struct			s_channel
 {
 	t_link				link;
-	int 				nb_client;
-	char 				name[CHANNEL_SIZE + 1];
-	char 				client_connected[MAX_CLIENT];
+	int					nb_client;
+	char				name[CHANNEL_SIZE + 1];
+	char				client_connected[MAX_CLIENT];
 }						t_channel;
 
-typedef struct 			s_fd
+typedef struct			s_fd
 {
-	int 				socket;
+	int					socket;
 	enum e_socket_type	type;
 	void				(*ft_read)();
 	void				(*ft_write)();
 	t_ring_buffer		buf_read;
 	t_ring_buffer		buf_write;
-	char 				nickname[NICKNAME_SIZE + 1];
+	char				nickname[NICKNAME_SIZE + 1];
 	t_channel			*curr_chan;
 }						t_fd;
 
-typedef struct 			s_server
+typedef struct			s_server
 {
 	t_fd				*fd_array;
-	int 				max_fd;
-	int 				curr_nb;
-	int 				ret_select;
-	uint16_t 			port;
+	int					max_fd;
+	int					curr_nb;
+	int					ret_select;
+	uint16_t			port;
 	fd_set				readfds;
 	fd_set				writefds;
 	t_list				channel_list;
 }						t_server;
 
-void 					cmd(t_server *server, int sc, char *cmd);
+void					cmd(t_server *server, int sc, char *cmd);
 
 void					cmd_join(t_server *server, int sc, char *cmd);
 void					join_channel(t_server *server, int sc, char *name);
 
 void					cmd_leave(t_server *server, int sc, char *cmd);
-void					leave_channel(t_server *server, t_channel *chan, int sc);
+void					leave_channel(t_server *server, t_channel *chan,
+	int sc);
 void					try_leave_channel(t_server *server, int sc, char *name);
 void					delete_chan(t_list *list, t_channel *chan);
 void					leave_all_channel(t_server *server, int sc);
@@ -97,12 +104,10 @@ void					cmd_list(t_server *server, int sc, char *cmd);
 
 void					cmd_whois(t_server *server, int sc, char *cmd);
 
-void					debug_print_channel(void *ptr);
-void					debug_print_all_channel(t_server *server);
-
 void					print_usage(char *prog_name);
 void					print_error_exit(char *str, char *file, int line);
-void					send_error(t_server *server, int sc, char *error, char *error2);
+void					send_error(t_server *server, int sc, char *error,
+	char *error2);
 
 void					event_write(t_server *server, int sc);
 void					event_read(t_server *server, int sc);
@@ -114,26 +119,30 @@ void					is_set_socket(t_server *server);
 
 void					print_log_error(t_server *server, int sc, char *str,
 										char *str2);
-void					print_log_new_client(t_server *server, int sc, struct sockaddr_in *sock_in);
-void					print_log_success(t_server *server, int sc, char *str, char *str2);
+void					print_log_new_client(t_server *server, int sc,
+	struct sockaddr_in *sock_in);
+void					print_log_success(t_server *server, int sc, char *str,
+	char *str2);
 
 void					ring_buffer_read(t_server *server, int sc, char *str);
 void					ring_buffer_write(t_server *server, int sc, char *str);
 
-void 					action_send_to_chan(t_server *server, int sc, t_channel *name, char *msg);
-void 					action_send_to_client(t_server *server, int sc, char *msg);
-void					action_send_error(t_server *server, int sc, char *error, char *error2);
+void					action_send_to_chan(t_server *server, int sc,
+	t_channel *name, char *msg);
+void					action_send_to_client(t_server *server, int sc,
+	char *msg);
+void					action_send_error(t_server *server, int sc,
+	char *error, char *error2);
 void					action_send_name(t_server *server, int sc);
 
 void					set_client_socket(t_server *server, int sc);
 
 void					init_server(t_server *server, uint16_t port);
 
-char 					*get_formated_msg(t_server *server, int sc, char *msg);
-char 					*get_formated_private_msg(t_server *server, int sc, char *msg);
-int 					find_end_msg(char *msg);
-
-void					set_msg(t_server *server, int sc, char *msg);
+char					*get_formated_msg(t_server *server, int sc, char *msg);
+char					*get_formated_private_msg(t_server *server,
+	int sc, char *msg);
+int						find_end_msg(char *msg);
 
 t_channel				*find_channel_by_name(t_server *server, char *name);
 t_fd					*find_client_by_name(t_server *server, char *name);

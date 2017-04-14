@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cmd_list.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:25:08 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:25:09 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void		cmd_list(t_server *server, int sc, char *cmd)
 {
 	t_link		*n;
 	t_channel	*chan;
-	char 		*all_chan;
+	char		*all_chan;
 
 	n = server->channel_list.head;
 	all_chan = NULL;

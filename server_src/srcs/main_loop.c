@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_loop.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:26:11 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:26:12 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void		set_socket(t_server *server)
@@ -21,7 +33,7 @@ void		set_socket(t_server *server)
 	}
 }
 
-void	main_loop(t_server *server)
+void		main_loop(t_server *server)
 {
 	while (42)
 	{
@@ -32,7 +44,7 @@ void	main_loop(t_server *server)
 	}
 }
 
-void	is_set_socket(t_server *server)
+void		is_set_socket(t_server *server)
 {
 	int		i;
 

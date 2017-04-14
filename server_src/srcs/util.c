@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   util.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:26:51 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:26:52 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
-int 	find_end_msg(char *msg)
+int		find_end_msg(char *msg)
 {
-	char 	*cr;
+	char	*cr;
 
 	cr = ft_strchr(msg, '\n');
 	if (cr)
@@ -10,10 +22,10 @@ int 	find_end_msg(char *msg)
 	return (0);
 }
 
-char 	*get_formated_msg(t_server *server, int sc, char *msg)
+char	*get_formated_msg(t_server *server, int sc, char *msg)
 {
-	char 	*name;
-	char 	*m;
+	char	*name;
+	char	*m;
 
 	name = ft_strdup(server->fd_array[sc].nickname);
 	name = ft_strjoin_free(COLOR_NICK_NAME"<", name, 2);
@@ -22,10 +34,10 @@ char 	*get_formated_msg(t_server *server, int sc, char *msg)
 	return (m);
 }
 
-char 	*get_formated_private_msg(t_server *server, int sc, char *msg)
+char	*get_formated_private_msg(t_server *server, int sc, char *msg)
 {
-	char 	*name;
-	char 	*m;
+	char	*name;
+	char	*m;
 
 	name = ft_strdup(server->fd_array[sc].nickname);
 	name = ft_strjoin_free(COLOR_NICK_NAME_PRIVATE"<", name, 2);
