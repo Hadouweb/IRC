@@ -29,4 +29,5 @@ void	cmd_who(t_server *server, int sc, char *cmd)
 	}
 	print_log_success(server, sc, "command /who", NULL);
 	action_send_to_client(server, sc, all_name);
+	ft_strdel(&all_name);
 }

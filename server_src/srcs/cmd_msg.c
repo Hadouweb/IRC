@@ -11,6 +11,7 @@ static void		check_msg_cmd_client(t_server *server, int sc, char *name, char *ms
 	{
 		msg = get_formated_private_msg(server, sc, msg);
 		action_send_to_client(server, client_dst->socket, msg);
+		ft_strdel(&msg);
 	}
 }
 

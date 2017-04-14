@@ -8,6 +8,7 @@ void			set_client_socket(t_server *server, int sc)
 	{
 		default_name = ft_strjoin_free("Guest", ft_itoa(sc), 2);
 		ft_strcpy(server->fd_array[sc].nickname, default_name);
+		ft_strdel(&default_name);
 		server->fd_array[sc].socket = sc;
 		server->fd_array[sc].type = CLIENT;
 		server->fd_array[sc].ft_read = event_read;

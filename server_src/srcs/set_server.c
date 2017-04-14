@@ -7,6 +7,7 @@ static void		set_server_socket(t_server *server)
 	struct protoent		*protocol;
 
 	protocol = getprotobyname("tcp");
+	ft_bzero(&sock_in, sizeof(sock_in));
 	if (protocol == NULL)
 		print_error_exit("getprotobyname", __FILE__, __LINE__);
 	socket_server = socket(PF_INET6, SOCK_STREAM, protocol->p_proto);

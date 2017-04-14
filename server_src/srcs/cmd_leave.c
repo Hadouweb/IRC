@@ -26,7 +26,6 @@ void	delete_chan(t_list *list, t_channel *chan)
 	}
 	list->size--;
 	free(chan);
-	chan = NULL;
 }
 
 void		leave_channel(t_server *server, t_channel *chan, int sc)
@@ -46,7 +45,7 @@ void		leave_all_channel(t_server *server, int sc)
 	while (n)
 	{
 		chan = PTR_NODE(n, t_channel, link);
-		if (chan->client_connected[sc] == 1)
+		if (chan && chan->client_connected[sc] == 1)
 			leave_channel(server, chan, sc);
 		n = n->next;
 	}
@@ -82,4 +81,5 @@ void		cmd_leave(t_server *server, int sc, char *cmd)
 		i++;
 	name[i] = '\0';
 	try_leave_channel(server, sc, name);
+	ft_strdel(&name);
 }

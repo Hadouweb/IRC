@@ -8,6 +8,7 @@ static t_channel	*add_channel(t_server *server, char *name)
 	if (chan != NULL)
 		return (chan);
 	chan = (t_channel*)malloc(sizeof(t_channel));
+	ft_bzero(chan, sizeof(t_channel));
 	if (chan == NULL)
 		print_error_exit("malloc", __FILE__, __LINE__);
 	ft_strcpy(chan->name, name);
@@ -57,5 +58,6 @@ void				cmd_join(t_server *server, int sc, char *cmd)
 		print_log_success(server, sc, "command /join", name);
 		join_channel(server, sc, name);
 	}
+	ft_strdel(&name);
 }
 

@@ -57,6 +57,7 @@ static void		prepare_data(t_server *server, int sc, t_fd *client)
 		rep = ft_strjoin_free(rep, " 0 channel", 1);
 	print_log_success(server, sc, "command /whois", client->nickname);
 	action_send_to_client(server, sc, rep);
+	ft_strdel(&rep);
 }
 
 void			cmd_whois(t_server *server, int sc, char *cmd)
@@ -80,4 +81,5 @@ void			cmd_whois(t_server *server, int sc, char *cmd)
 		send_error(server, sc, name, "does not exist");
 	else
 		prepare_data(server, sc, client);
+	ft_strdel(&name);
 }

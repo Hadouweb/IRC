@@ -2,10 +2,14 @@
 
 static void		call_action(t_server *server, int sc, char *msg)
 {
+	char 	*tmp_msg;
+
+	tmp_msg = ft_strdup(msg);
 	if (msg[0] == '/')
-		cmd(server, sc, msg);
+		cmd(server, sc, tmp_msg);
 	else
-		action_send_to_chan(server, sc, NULL, msg);
+		action_send_to_chan(server, sc, NULL, tmp_msg);
+	ft_strdel(&tmp_msg);
 }
 
 static void 	convert_buffer(t_server *server, int sc)

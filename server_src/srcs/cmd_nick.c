@@ -42,4 +42,5 @@ void			cmd_nick(t_server *server, int sc, char *cmd)
 		ft_strcpy(server->fd_array[sc].nickname, name);
 		action_send_name(server, sc);
 	}
+	ft_strdel(&name);
 }

@@ -13,21 +13,23 @@ int 	find_end_msg(char *msg)
 char 	*get_formated_msg(t_server *server, int sc, char *msg)
 {
 	char 	*name;
+	char 	*m;
 
-	name = server->fd_array[sc].nickname;
-	name = ft_strjoin(COLOR_NICK_NAME"<", name);
-	name = ft_strjoin(name, "> "COLOR_END);
-	msg = ft_strjoin(name, msg);
-	return (msg);
+	name = ft_strdup(server->fd_array[sc].nickname);
+	name = ft_strjoin_free(COLOR_NICK_NAME"<", name, 2);
+	name = ft_strjoin_free(name, "> "COLOR_END, 1);
+	m = ft_strjoin_free(name, msg, 1);
+	return (m);
 }
 
 char 	*get_formated_private_msg(t_server *server, int sc, char *msg)
 {
 	char 	*name;
+	char 	*m;
 
-	name = server->fd_array[sc].nickname;
-	name = ft_strjoin(COLOR_NICK_NAME_PRIVATE"<", name);
-	name = ft_strjoin(name, "> "COLOR_END);
-	msg = ft_strjoin(name, msg);
-	return (msg);
+	name = ft_strdup(server->fd_array[sc].nickname);
+	name = ft_strjoin_free(COLOR_NICK_NAME_PRIVATE"<", name, 2);
+	name = ft_strjoin_free(name, "> "COLOR_END, 1);
+	m = ft_strjoin_free(name, msg, 1);
+	return (m);
 }

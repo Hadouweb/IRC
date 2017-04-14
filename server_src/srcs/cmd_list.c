@@ -23,4 +23,5 @@ void		cmd_list(t_server *server, int sc, char *cmd)
 	}
 	print_log_success(server, sc, "command /list", NULL);
 	action_send_to_client(server, sc, all_chan);
+	ft_strdel(&all_chan);
 }

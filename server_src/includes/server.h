@@ -120,9 +120,8 @@ void					print_log_success(t_server *server, int sc, char *str, char *str2);
 void					ring_buffer_read(t_server *server, int sc, char *str);
 void					ring_buffer_write(t_server *server, int sc, char *str);
 
-void action_send_to_chan(t_server *server, int sc, t_channel *name, char *msg);
-void 					action_send_to_client(t_server *server, int sc,
-											  char *msg);
+void 					action_send_to_chan(t_server *server, int sc, t_channel *name, char *msg);
+void 					action_send_to_client(t_server *server, int sc, char *msg);
 void					action_send_error(t_server *server, int sc, char *error, char *error2);
 void					action_send_name(t_server *server, int sc);
 

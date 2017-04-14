@@ -1,6 +1,6 @@
 #include "server.h"
 
-void action_send_to_chan(t_server *server, int sc, t_channel *chan, char *msg)
+void		action_send_to_chan(t_server *server, int sc, t_channel *chan, char *msg)
 {
 	int			i;
 	t_fd		*client;
@@ -16,6 +16,7 @@ void action_send_to_chan(t_server *server, int sc, t_channel *chan, char *msg)
 			set_msg(server, i, msg);
 		i++;
 	}
+	ft_strdel(&msg);
 }
 
 void 		action_send_to_client(t_server *server, int sc, char *msg)
@@ -45,4 +46,5 @@ void		action_send_error(t_server *server, int sc, char *error, char *error2)
 	}
 	error = ft_strjoin_free(error, "\033[0m\n", 1);
 	set_msg(server, sc, error);
+	ft_strdel(&error);
 }
