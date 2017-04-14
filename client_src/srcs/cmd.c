@@ -23,3 +23,12 @@ void			cmd_connect(t_client *client, char *cmd)
 		close(previous_socket);
 	}
 }
+
+void 	cmd(t_client *client)
+{
+	char	*cmd;
+
+	cmd = client->me->buf_read.buff;
+	if (ft_strncmp(cmd, "/quit ", 8) == 0)
+		;//cmd_quit(client, cmd);
+}

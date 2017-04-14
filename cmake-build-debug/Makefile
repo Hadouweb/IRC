@@ -446,6 +446,33 @@ server_src/srcs/cmd_leave.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_leave.c.s
 .PHONY : server_src/srcs/cmd_leave.c.s
 
+server_src/srcs/cmd_list.o: server_src/srcs/cmd_list.c.o
+
+.PHONY : server_src/srcs/cmd_list.o
+
+# target to build an object file
+server_src/srcs/cmd_list.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_list.c.o
+.PHONY : server_src/srcs/cmd_list.c.o
+
+server_src/srcs/cmd_list.i: server_src/srcs/cmd_list.c.i
+
+.PHONY : server_src/srcs/cmd_list.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_list.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_list.c.i
+.PHONY : server_src/srcs/cmd_list.c.i
+
+server_src/srcs/cmd_list.s: server_src/srcs/cmd_list.c.s
+
+.PHONY : server_src/srcs/cmd_list.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_list.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_list.c.s
+.PHONY : server_src/srcs/cmd_list.c.s
+
 server_src/srcs/cmd_msg.o: server_src/srcs/cmd_msg.c.o
 
 .PHONY : server_src/srcs/cmd_msg.o
@@ -526,6 +553,33 @@ server_src/srcs/cmd_who.s: server_src/srcs/cmd_who.c.s
 server_src/srcs/cmd_who.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_who.c.s
 .PHONY : server_src/srcs/cmd_who.c.s
+
+server_src/srcs/cmd_whois.o: server_src/srcs/cmd_whois.c.o
+
+.PHONY : server_src/srcs/cmd_whois.o
+
+# target to build an object file
+server_src/srcs/cmd_whois.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_whois.c.o
+.PHONY : server_src/srcs/cmd_whois.c.o
+
+server_src/srcs/cmd_whois.i: server_src/srcs/cmd_whois.c.i
+
+.PHONY : server_src/srcs/cmd_whois.i
+
+# target to preprocess a source file
+server_src/srcs/cmd_whois.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_whois.c.i
+.PHONY : server_src/srcs/cmd_whois.c.i
+
+server_src/srcs/cmd_whois.s: server_src/srcs/cmd_whois.c.s
+
+.PHONY : server_src/srcs/cmd_whois.s
+
+# target to generate assembly for a file
+server_src/srcs/cmd_whois.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/cmd_whois.c.s
+.PHONY : server_src/srcs/cmd_whois.c.s
 
 server_src/srcs/debug.o: server_src/srcs/debug.c.o
 
@@ -851,6 +905,33 @@ server_src/srcs/util.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/util.c.s
 .PHONY : server_src/srcs/util.c.s
 
+server_src/srcs/util_channel.o: server_src/srcs/util_channel.c.o
+
+.PHONY : server_src/srcs/util_channel.o
+
+# target to build an object file
+server_src/srcs/util_channel.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/util_channel.c.o
+.PHONY : server_src/srcs/util_channel.c.o
+
+server_src/srcs/util_channel.i: server_src/srcs/util_channel.c.i
+
+.PHONY : server_src/srcs/util_channel.i
+
+# target to preprocess a source file
+server_src/srcs/util_channel.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/util_channel.c.i
+.PHONY : server_src/srcs/util_channel.c.i
+
+server_src/srcs/util_channel.s: server_src/srcs/util_channel.c.s
+
+.PHONY : server_src/srcs/util_channel.s
+
+# target to generate assembly for a file
+server_src/srcs/util_channel.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server_src/srcs/util_channel.c.s
+.PHONY : server_src/srcs/util_channel.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -895,6 +976,9 @@ help:
 	@echo "... server_src/srcs/cmd_leave.o"
 	@echo "... server_src/srcs/cmd_leave.i"
 	@echo "... server_src/srcs/cmd_leave.s"
+	@echo "... server_src/srcs/cmd_list.o"
+	@echo "... server_src/srcs/cmd_list.i"
+	@echo "... server_src/srcs/cmd_list.s"
 	@echo "... server_src/srcs/cmd_msg.o"
 	@echo "... server_src/srcs/cmd_msg.i"
 	@echo "... server_src/srcs/cmd_msg.s"
@@ -904,6 +988,9 @@ help:
 	@echo "... server_src/srcs/cmd_who.o"
 	@echo "... server_src/srcs/cmd_who.i"
 	@echo "... server_src/srcs/cmd_who.s"
+	@echo "... server_src/srcs/cmd_whois.o"
+	@echo "... server_src/srcs/cmd_whois.i"
+	@echo "... server_src/srcs/cmd_whois.s"
 	@echo "... server_src/srcs/debug.o"
 	@echo "... server_src/srcs/debug.i"
 	@echo "... server_src/srcs/debug.s"
@@ -940,6 +1027,9 @@ help:
 	@echo "... server_src/srcs/util.o"
 	@echo "... server_src/srcs/util.i"
 	@echo "... server_src/srcs/util.s"
+	@echo "... server_src/srcs/util_channel.o"
+	@echo "... server_src/srcs/util_channel.i"
+	@echo "... server_src/srcs/util_channel.s"
 .PHONY : help
 
 

@@ -37,6 +37,8 @@ set(SRCS_SERVER
         server_src/srcs/cmd_leave.c
         server_src/srcs/cmd_who.c
         server_src/srcs/cmd_msg.c
+        server_src/srcs/cmd_list.c
+        server_src/srcs/cmd_whois.c
         server_src/srcs/ring_buffer.c
         server_src/srcs/debug.c
         server_src/srcs/print_log_bonus.c

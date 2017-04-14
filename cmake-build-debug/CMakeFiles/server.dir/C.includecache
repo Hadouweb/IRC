@@ -46,6 +46,10 @@ server.h
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
+/Users/nle-bret/project/IRC/server_src/srcs/cmd_list.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
 /Users/nle-bret/project/IRC/server_src/srcs/cmd_msg.c
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
@@ -55,10 +59,6 @@ server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
 /Users/nle-bret/project/IRC/server_src/srcs/cmd_who.c
-server.h
-/Users/nle-bret/project/IRC/server_src/srcs/server.h
-
-/Users/nle-bret/project/IRC/server_src/srcs/config.c
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
@@ -74,15 +74,19 @@ server.h
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
-/Users/nle-bret/project/IRC/server_src/srcs/event_client.c
-server.h
-/Users/nle-bret/project/IRC/server_src/srcs/server.h
-
-/Users/nle-bret/project/IRC/server_src/srcs/event_server.c
-server.h
-/Users/nle-bret/project/IRC/server_src/srcs/server.h
-
 /Users/nle-bret/project/IRC/server_src/srcs/main.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
+/Users/nle-bret/project/IRC/server_src/srcs/main_loop.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
+/Users/nle-bret/project/IRC/server_src/srcs/msg_format_rfc.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
+/Users/nle-bret/project/IRC/server_src/srcs/print_log_bonus.c
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
@@ -90,11 +94,23 @@ server.h
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
-/Users/nle-bret/project/IRC/server_src/srcs/send.c
+/Users/nle-bret/project/IRC/server_src/srcs/set_action.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
+/Users/nle-bret/project/IRC/server_src/srcs/set_client.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
+/Users/nle-bret/project/IRC/server_src/srcs/set_server.c
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 
 /Users/nle-bret/project/IRC/server_src/srcs/util.c
+server.h
+/Users/nle-bret/project/IRC/server_src/srcs/server.h
+
+/Users/nle-bret/project/IRC/server_src/srcs/util_channel.c
 server.h
 /Users/nle-bret/project/IRC/server_src/srcs/server.h
 

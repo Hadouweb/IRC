@@ -78,6 +78,7 @@ void					is_set_socket(t_client *client);
 void					ring_buffer_read(t_client *client, char *str);
 void					ring_buffer_write(t_client *client, char *str);
 
+void 					cmd(t_client *client);
 void					cmd_connect(t_client *client, char *cmd);
 
 void					print_error(char *error, char *error2);

@@ -93,6 +93,10 @@ void					cmd_nick(t_server *server, int sc, char *cmd);
 
 void					cmd_who(t_server *server, int sc, char *cmd);
 
+void					cmd_list(t_server *server, int sc, char *cmd);
+
+void					cmd_whois(t_server *server, int sc, char *cmd);
+
 void					debug_print_channel(void *ptr);
 void					debug_print_all_channel(t_server *server);
 

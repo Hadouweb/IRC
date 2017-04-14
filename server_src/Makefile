@@ -25,6 +25,8 @@ SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/cmd_leave.c\
         $(SRCS_PATH)/cmd_who.c\
         $(SRCS_PATH)/cmd_msg.c\
+        $(SRCS_PATH)/cmd_whois.c\
+        $(SRCS_PATH)/cmd_list.c\
         $(SRCS_PATH)/ring_buffer.c\
         $(SRCS_PATH)/debug.c\
         $(SRCS_PATH)/print_log_bonus.c\

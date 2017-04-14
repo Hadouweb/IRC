@@ -13,10 +13,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/server_src/srcs/cmd_leave.c.o"
   "CMakeFiles/server.dir/server_src/srcs/cmd_who.c.o"
   "CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.o"
+  "CMakeFiles/server.dir/server_src/srcs/cmd_list.c.o"
+  "CMakeFiles/server.dir/server_src/srcs/cmd_whois.c.o"
   "CMakeFiles/server.dir/server_src/srcs/ring_buffer.c.o"
   "CMakeFiles/server.dir/server_src/srcs/debug.c.o"
   "CMakeFiles/server.dir/server_src/srcs/print_log_bonus.c.o"
   "CMakeFiles/server.dir/server_src/srcs/msg_format_rfc.c.o"
+  "CMakeFiles/server.dir/server_src/srcs/util_channel.c.o"
   "server.pdb"
   "server"
 )

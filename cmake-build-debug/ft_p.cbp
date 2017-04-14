@@ -498,6 +498,9 @@
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_leave.c">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_list.c">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_msg.c">
 			<Option target="server"/>
 		</Unit>
@@ -505,6 +508,9 @@
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_who.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/cmd_whois.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/debug.c">
@@ -541,6 +547,9 @@
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/util.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/Users/nle-bret/project/IRC/server_src/srcs/util_channel.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/CMakeLists.txt">

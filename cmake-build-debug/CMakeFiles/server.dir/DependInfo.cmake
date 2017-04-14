@@ -7,9 +7,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd_join.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_join.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd_leave.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_leave.c.o"
+  "/Users/nle-bret/project/IRC/server_src/srcs/cmd_list.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_list.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd_msg.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_msg.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd_nick.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_nick.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/cmd_who.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_who.c.o"
+  "/Users/nle-bret/project/IRC/server_src/srcs/cmd_whois.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/cmd_whois.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/debug.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/debug.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/error.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/error.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/event.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/event.c.o"
@@ -22,6 +24,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/nle-bret/project/IRC/server_src/srcs/set_client.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/set_client.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/set_server.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/set_server.c.o"
   "/Users/nle-bret/project/IRC/server_src/srcs/util.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/util.c.o"
+  "/Users/nle-bret/project/IRC/server_src/srcs/util_channel.c" "/Users/nle-bret/project/IRC/cmake-build-debug/CMakeFiles/server.dir/server_src/srcs/util_channel.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

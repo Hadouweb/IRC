@@ -12,6 +12,10 @@ void 	cmd(t_server *server, int sc, char *cmd)
 		cmd_who(server, sc, cmd);
 	else if (ft_strncmp(cmd, "/msg ", 5) == 0)
 		cmd_msg(server, sc, cmd);
+	else if (ft_strcmp(cmd, "/list\n") == 0)
+		cmd_list(server, sc, cmd);
+	else if (ft_strncmp(cmd, "/whois ", 7) == 0)
+		cmd_whois(server, sc, cmd);
 	else
 		send_error(server, sc, "unknown cmd: ", cmd);
 }

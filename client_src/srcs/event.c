@@ -3,9 +3,9 @@
 void		event_write(t_client *client, int sc)
 {
 	if (ft_strncmp(client->me->buf_write.buff, "/connect ", 8) == 0)
-	{
 		cmd_connect(client, client->me->buf_write.buff);
-	}
+	else if (ft_strcmp(client->me->buf_write.buff, "/quit\n") == 0)
+		exit(0);
 	else
 	{
 		send(sc, client->me->buf_write.buff,
