@@ -24,8 +24,6 @@ static void		call_action(t_client *client, char *msg)
 {
 	if (msg[0] == ':')
 		set_nickname(client, msg);
-	else if (msg[0] == '/')
-		cmd(client);
 	else
 	{
 		ft_putstr("\r                                    ");
