@@ -45,6 +45,9 @@ void		leave_channel(t_server *server, t_channel *chan, int sc)
 {
 	chan->client_connected[sc] = 0;
 	chan->nb_client--;
+	if (server->fd_array[sc].curr_chan == chan)
+		server->fd_array[sc].curr_chan = find_channel_by_name(server,
+		DEFAULT_CHAN);
 	if (chan->nb_client == 0)
 		delete_chan(&server->channel_list, chan);
 }

@@ -20,6 +20,7 @@
 # include <arpa/inet.h>
 # include <unistd.h>
 # include <netdb.h>
+# include <stdio.h>
 # include "libft.h"
 
 enum	e_socket_type

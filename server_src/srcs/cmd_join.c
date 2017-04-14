@@ -36,9 +36,12 @@ void				join_channel(t_server *server, int sc, char *name)
 	t_channel	*chan;
 
 	chan = add_channel(server, name);
-	chan->client_connected[sc] = 1;
 	server->fd_array[sc].curr_chan = chan;
-	chan->nb_client++;
+	if (chan->client_connected[sc] == 0)
+	{
+		chan->nb_client++;
+		chan->client_connected[sc] = 1;
+	}
 }
 
 void				cmd_join(t_server *s, int sc, char *cmd)
