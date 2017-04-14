@@ -68,6 +68,11 @@ static char 				*convert_hostname(char *hostname)
 	return (hostname);
 }
 
+void						quit(t_client *client)
+{
+	free(client->me);
+}
+
 void						init_client(t_client *client, char *hostname,
 	uint16_t port)
 {

@@ -18,6 +18,7 @@ void			cmd_connect(t_client *client, char *cmd)
 	if (hostname)
 	{
 		previous_socket = client->me->socket;
+		quit(client);
 		ft_bzero(client, sizeof(t_client));
 		init_client(client, hostname, port);
 		close(previous_socket);

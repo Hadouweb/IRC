@@ -88,4 +88,6 @@ void					set_msg(t_client *client, char *msg);
 void					nc_init(void);
 void					print_my_nickname(t_client *client);
 
+void					quit(t_client *client);
+
 #endif
