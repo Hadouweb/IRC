@@ -19,8 +19,6 @@
 # include <arpa/inet.h>
 # include <unistd.h>
 # include <netdb.h>
-# include <stdio.h>
-# include <ncurses.h>
 # include "libft.h"
 
 # define BUF_SIZE	512
