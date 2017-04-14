@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/client.dir/client_src/srcs/main_loop.c.o"
   "CMakeFiles/client.dir/client_src/srcs/ring_buffer.c.o"
   "CMakeFiles/client.dir/client_src/srcs/cmd.c.o"
-  "CMakeFiles/client.dir/client_src/srcs/msg_format_rfc.c.o"
   "client.pdb"
   "client"
 )

@@ -210,9 +210,6 @@
 		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/main_loop.c">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/msg_format_rfc.c">
-			<Option target="client"/>
-		</Unit>
 		<Unit filename="/Users/nle-bret/project/IRC/client_src/srcs/ring_buffer.c">
 			<Option target="client"/>
 		</Unit>

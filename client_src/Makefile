@@ -18,7 +18,6 @@ SRC =   $(SRCS_PATH)/main.c\
         $(SRCS_PATH)/main_loop.c\
         $(SRCS_PATH)/ring_buffer.c\
         $(SRCS_PATH)/cmd.c\
-        $(SRCS_PATH)/msg_format_rfc.c\
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   set_client.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:46:15 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:46:16 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "client.h"
 
-static enum e_ip_version 	get_ip_version(char *host)
+static enum e_ip_version	get_ip_version(char *host)
 {
-	struct sockaddr_in 	sin4;
+	struct sockaddr_in	sin4;
 	struct sockaddr_in6	sin6;
-	int 				ret;
+	int					ret;
 
 	ret = inet_pton(AF_INET, host, &(sin4.sin_addr));
 	if (ret != 0)
@@ -61,16 +73,11 @@ static void					set_client_socket6(t_client *client)
 	client->me->ft_write = event_write;
 }
 
-static char 				*convert_hostname(char *hostname)
+static char					*convert_hostname(char *hostname)
 {
 	if (ft_strcmp(hostname, "localhost") == 0)
 		return ("127.0.0.1");
 	return (hostname);
-}
-
-void						quit(t_client *client)
-{
-	free(client->me);
 }
 
 void						init_client(t_client *client, char *hostname,
@@ -92,4 +99,3 @@ void						init_client(t_client *client, char *hostname,
 	else
 		print_error_exit("Incorrect ip format", __FILE__, __LINE__);
 }
-

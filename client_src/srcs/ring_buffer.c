@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ring_buffer.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:46:09 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:46:10 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "client.h"
 
 static void		set_nickname(t_client *client, char *msg)
@@ -23,11 +35,11 @@ static void		call_action(t_client *client, char *msg)
 	}
 }
 
-static void 	convert_buffer(t_client *client, char *ring_buffer)
+static void		convert_buffer(t_client *client, char *ring_buffer)
 {
-	char 	buffer[BUF_SIZE + 1];
-	int 	i;
-	int 	j;
+	char	buffer[BUF_SIZE + 1];
+	int		i;
+	int		j;
 
 	ft_bzero(&buffer, sizeof(buffer));
 	i = 0;
@@ -39,7 +51,7 @@ static void 	convert_buffer(t_client *client, char *ring_buffer)
 		while (ring_buffer[i] != '\n')
 			i++;
 		i++;
-		while (j < (int) ft_strlen(ring_buffer))
+		while (j < (int)ft_strlen(ring_buffer))
 		{
 			if (i >= BUF_SIZE)
 				i = 0;
@@ -51,8 +63,8 @@ static void 	convert_buffer(t_client *client, char *ring_buffer)
 
 void			ring_buffer_read(t_client *client, char *str)
 {
-	int 	i;
-	char 	*ring_buffer;
+	int		i;
+	char	*ring_buffer;
 
 	i = 0;
 	ring_buffer = client->me->buf_read.buff;
@@ -73,8 +85,8 @@ void			ring_buffer_read(t_client *client, char *str)
 
 void			ring_buffer_write(t_client *client, char *str)
 {
-	int 	i;
-	char 	*ring_buffer;
+	int		i;
+	char	*ring_buffer;
 
 	i = 0;
 	ring_buffer = client->me->buf_write.buff;

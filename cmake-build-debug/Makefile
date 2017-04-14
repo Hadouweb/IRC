@@ -284,33 +284,6 @@ client_src/srcs/main_loop.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/main_loop.c.s
 .PHONY : client_src/srcs/main_loop.c.s
 
-client_src/srcs/msg_format_rfc.o: client_src/srcs/msg_format_rfc.c.o
-
-.PHONY : client_src/srcs/msg_format_rfc.o
-
-# target to build an object file
-client_src/srcs/msg_format_rfc.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/msg_format_rfc.c.o
-.PHONY : client_src/srcs/msg_format_rfc.c.o
-
-client_src/srcs/msg_format_rfc.i: client_src/srcs/msg_format_rfc.c.i
-
-.PHONY : client_src/srcs/msg_format_rfc.i
-
-# target to preprocess a source file
-client_src/srcs/msg_format_rfc.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/msg_format_rfc.c.i
-.PHONY : client_src/srcs/msg_format_rfc.c.i
-
-client_src/srcs/msg_format_rfc.s: client_src/srcs/msg_format_rfc.c.s
-
-.PHONY : client_src/srcs/msg_format_rfc.s
-
-# target to generate assembly for a file
-client_src/srcs/msg_format_rfc.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_src/srcs/msg_format_rfc.c.s
-.PHONY : client_src/srcs/msg_format_rfc.c.s
-
 client_src/srcs/ring_buffer.o: client_src/srcs/ring_buffer.c.o
 
 .PHONY : client_src/srcs/ring_buffer.o
@@ -904,9 +877,6 @@ help:
 	@echo "... client_src/srcs/main_loop.o"
 	@echo "... client_src/srcs/main_loop.i"
 	@echo "... client_src/srcs/main_loop.s"
-	@echo "... client_src/srcs/msg_format_rfc.o"
-	@echo "... client_src/srcs/msg_format_rfc.i"
-	@echo "... client_src/srcs/msg_format_rfc.s"
 	@echo "... client_src/srcs/ring_buffer.o"
 	@echo "... client_src/srcs/ring_buffer.i"
 	@echo "... client_src/srcs/ring_buffer.s"

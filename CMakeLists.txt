@@ -18,7 +18,6 @@ set(SRCS_CLIENT
         client_src/srcs/main_loop.c
         client_src/srcs/ring_buffer.c
         client_src/srcs/cmd.c
-        client_src/srcs/msg_format_rfc.c
         )
 set(HEADER_CLIENT client_src/includes/client.h)
 

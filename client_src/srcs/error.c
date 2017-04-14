@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:45:49 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:45:50 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "client.h"
 
 void	print_usage(char *prog_name)
@@ -21,13 +33,4 @@ void	print_error_exit(char *str, char *file, int line)
 	ft_putnbr_fd(line, 2);
 	ft_putchar('\n');
 	exit(1);
-}
-
-void	print_error(char *error, char *error2)
-{
-	error = ft_strjoin("\033[31;1m", error);
-	if (error2 != NULL)
-		error = ft_strjoin_free(error, error2, 1);
-	error = ft_strjoin_free(error, "\033[0m\n", 1);
-	ft_putstr(error);
 }

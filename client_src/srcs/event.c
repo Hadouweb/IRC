@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   event.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/14 06:45:53 by nle-bret          #+#    #+#             */
+/*   Updated: 2017/04/14 06:45:54 by nle-bret         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "client.h"
 
 void		event_write(t_client *client, int sc)
@@ -17,7 +29,7 @@ void		event_write(t_client *client, int sc)
 void		event_read(t_client *client, int sc)
 {
 	ssize_t		r;
-	char 		buff[BUF_SIZE + 1];
+	char		buff[BUF_SIZE + 1];
 
 	ft_bzero(buff, sizeof(buff));
 	r = recv(sc, buff, BUF_SIZE, 0);
